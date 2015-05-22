@@ -40,5 +40,15 @@ module testbench (/*AUTOARG*/) ;
              .CLK_IN                    (CLK_IN),
              .RESET_IN                  (RESET_IN));
    
-   
+
+   //
+   // Test Case
+   //
+   initial begin
+      @(posedge RESET_IN);
+      $display("RESET: Asserted @ %d", $time);
+      @(negedge RESET_IN);
+      $display("RESET: De-Asserted @ %d", $time);
+      
+   end
 endmodule // Basic

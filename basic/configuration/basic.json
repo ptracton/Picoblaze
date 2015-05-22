@@ -13,11 +13,11 @@
 	},
 	"xvlog" :{
 	    "executable" : "xvlog",
-        "arguments" : " -prj rtl_sim.f"
+        "arguments" : " -prj sim.f"
 	},
     "xelab" :{
         "executable":"xelab",
-        "arguments" : "work.glbl work.testbench -L unisims_ver -L unimacro_ver -L xilinxcorelib_ver -prj rtl_sim.f -log elaborate.log -debug all"
+        "arguments" : "work.glbl work.testbench -L unisims_ver -L unimacro_ver -L xilinxcorelib_ver -prj sim.f -log elaborate.log -debug all"
     },
 	"xsim" : {
 	    "executable": "xsim",

@@ -1,0 +1,15 @@
+;;
+
+  8 Feb 08
+ 1) TODO:  Add .mem and .m  format files
+ 2) TODO: a)  Add register names next to the alias names in the print out
+          b)  Add label addresses next to the label name.
+  14 Feb 08
+  1) BUG: constants whos first letter is 's' will be assumed to be registers and produce incorrect instructions.
+   - Fix was to  add test to getRegiseter method
+ 
+    if ( name[ 0 ] != 's' || name.length() <= 1 || name.length() > 2)
+		return -1 ;
+    : NOTE: still not good enough .  Cannot have a 2 letter constant which begins with 's'..
+    GES
+   
