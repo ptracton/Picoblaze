@@ -21,10 +21,19 @@ module basic (/*AUTOARG*/
    //
    // Wires and Registers
    //
+
+   wire [7:0] in_port;
+  
+   
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
    wire                 CLK_OUT;                // From syscon of system_controller.v
    wire                 RESET_OUT;              // From syscon of system_controller.v
+   wire                 interrupt_ack;          // From Picoblaze of cpu.v
+   wire [7:0]           out_port;               // From Picoblaze of cpu.v
+   wire [7:0]           port_id;                // From Picoblaze of cpu.v
+   wire                 read_strobe;            // From Picoblaze of cpu.v
+   wire                 write_strobe;           // From Picoblaze of cpu.v
    // End of automatics
 
    /*AUTOREG*/
@@ -40,5 +49,22 @@ module basic (/*AUTOARG*/
                             .CLK_IN             (CLK_IN),
                             .RESET_IN           (RESET_IN));
    
+
+   //
+   // Picoblaze CPU
+   //
+   cpu Picoblaze(/*AUTOINST*/
+                 // Outputs
+                 .port_id               (port_id[7:0]),
+                 .out_port              (out_port[7:0]),
+                 .write_strobe          (write_strobe),
+                 .read_strobe           (read_strobe),
+                 .interrupt_ack         (interrupt_ack),
+                 // Inputs
+                 .clk                   (clk),
+                 .in_port               (in_port[7:0]),
+                 .interrupt             (interrupt),
+                 .kcpsm6_sleep          (kcpsm6_sleep),
+                 .cpu_reset             (cpu_reset));
    
 endmodule // basic

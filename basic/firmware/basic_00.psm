@@ -1,0 +1,8 @@
+        ;; First Test Program
+        ;;
+        ;; Look at https://code.google.com/p/opbasm/
+        ;; 
+
+start:
+        output S0, 04
+        JUMP start
