@@ -160,7 +160,7 @@ module system_controller(
                      .LOCKED(LOCKED),
                      // 1-bit output: LOCK
                      // Clock Inputs: 1-bit (each) input: Clock input
-                     .CLKIN1(CLK_IN),
+                     .CLKIN1(xclk_buf),
                      // 1-bit input: Clock
                      // Control Ports: 1-bit (each) input: MMCM control ports
                      .PWRDWN(1'b0),
