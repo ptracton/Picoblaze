@@ -61,10 +61,14 @@ module basic (/*AUTOARG*/
                  .read_strobe           (read_strobe),
                  .interrupt_ack         (interrupt_ack),
                  // Inputs
-                 .clk                   (clk),
+                 .clk                   (CLK_OUT),
                  .in_port               (in_port[7:0]),
                  .interrupt             (interrupt),
                  .kcpsm6_sleep          (kcpsm6_sleep),
-                 .cpu_reset             (cpu_reset));
+                 .cpu_reset             (RESET_OUT));
+
+   assign in_port = 8'h00;
+   assign interrupt = 0;
+   assign kcpsm6_sleep = 0;   
    
 endmodule // basic

@@ -42,13 +42,19 @@ module testbench (/*AUTOARG*/) ;
    
 
    //
-   // Test Case
+   // Test XCase
    //
    initial begin
       @(posedge RESET_IN);
       $display("RESET: Asserted @ %d", $time);
       @(negedge RESET_IN);
       $display("RESET: De-Asserted @ %d", $time);
+
+      @(posedge testbench.dut.syscon.LOCKED);
+      $display("DCM LOCKED @ %d", $time);
+      
+      repeat(100) @(posedge CLK_IN);      
+      $stop;
       
    end
 endmodule // Basic

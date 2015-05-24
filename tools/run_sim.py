@@ -1,5 +1,12 @@
 #! /usr/bin/env python3
 
+"""
+run_sim.py
+
+This program is designed to run a Verilog simulation of the Picoblaze
+CPU on a Basys3 board.
+"""
+
 import json
 import os
 import os.path
@@ -8,7 +15,11 @@ import subprocess
 import sys
 import argparse
 
+
 def which(program):
+    """
+    Find the absolute path to specified program
+    """
     def is_exe(fpath):
         return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
 
@@ -31,6 +42,9 @@ if __name__ == "__main__":
     parser.add_argument("-D", "--debug",
                         help="Debug this script",
                         action="store_true")
+    parser.add_argument("--gui",
+                        help="Run with GUI",
+                        action="store_true")
     parser.add_argument("--json_file",
                         default="simulate.json",
                         help="JSON configuration file",
@@ -41,12 +55,13 @@ if __name__ == "__main__":
         print (args)
 
     json_file = "../configuration/" + args.json_file
+    print (os.path.isfile(json_file))
     try:
         f = open(json_file, "r")
         json_data = json.load(f)
     except:
         print("Failed to open %s" % (json_file))
-        sys.exit(-1)    
+        sys.exit(-1)
 
     steps = sorted(json_data['flow_steps'].items())
     print (steps)
@@ -62,7 +77,10 @@ if __name__ == "__main__":
         else:
             command = executable + " " + str(arguments)
 
+        if args.gui and 'gui' in json_data['flow'][step[1]]:
+            command = command + json_data['flow'][step[1]]['gui']
+
         print(command)
         command = shlex.split(command)
         p = subprocess.Popen(command)
-        p.wait()        
+        p.wait()
