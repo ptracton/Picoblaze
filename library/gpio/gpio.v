@@ -27,7 +27,7 @@ module gpio (/*AUTOARG*/
 
    //
    // Instantiate 8 bits of GPIO
-   //
+   // 
    
    gpio_bit bit0(
                  // Outputs
@@ -108,6 +108,5 @@ module gpio (/*AUTOARG*/
                  .clk                   (clk),
                  .gpio_oen              (gpio_oen[7]),
                  .gpio_data_out         (gpio_data_out[7]));   
-   
    
 endmodule // gpio

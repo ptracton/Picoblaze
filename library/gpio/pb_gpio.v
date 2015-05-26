@@ -24,7 +24,7 @@ module pb_gpio (/*AUTOARG*/
    input clk;
    input reset;
 
-   inout [GPIO_WIDTH-1:0] gpio;
+   inout [7:0] gpio;
 
    input [7:0]            port_id;
    input [7:0]            data_in;
@@ -39,19 +39,19 @@ module pb_gpio (/*AUTOARG*/
    
    gpio_regs #(.GPIO_BASE_ADDRESS(GPIO_BASE_ADDRESS))
    regs(/*AUTOINST*/
-                  // Outputs
-                  .data_out             (data_out[7:0]),
-                  .gpio_oen             (gpio_oen[7:0]),
-                  .gpio_data_out        (gpio_data_out[7:0]),
-                  .interrupt            (interrupt),
-                  // Inputs
-                  .clk                  (clk),
-                  .reset                (reset),
-                  .port_id              (port_id[7:0]),
-                  .data_in              (data_in[7:0]),
-                  .read_strobe          (read_strobe),
-                  .write_strobe         (write_strobe),
-                  .gpio_data_in         (gpio_data_in[7:0]));
+        // Outputs
+        .data_out                       (data_out[7:0]),
+        .gpio_oen                       (gpio_oen[7:0]),
+        .gpio_data_out                  (gpio_data_out[7:0]),
+        .interrupt                      (interrupt),
+        // Inputs
+        .clk                            (clk),
+        .reset                          (reset),
+        .port_id                        (port_id[7:0]),
+        .data_in                        (data_in[7:0]),
+        .read_strobe                    (read_strobe),
+        .write_strobe                   (write_strobe),
+        .gpio_data_in                   (gpio_data_in[7:0]));
 
    gpio port(/*AUTOINST*/
              // Outputs

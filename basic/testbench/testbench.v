@@ -38,7 +38,10 @@ module testbench (/*AUTOARG*/) ;
    end
 
    wire [7:0]           LEDS;                   // From dut of basic.v
-   reg [7:0]            SWITCHES = 8'h00;                   // From dut of basic.v
+   reg [7:0]            SWITCHES_reg = 8'h00;                   // From dut of basic.v
+   wire [7:0]           SWITCHES;
+   assign SWITCHES = SWITCHES_reg;
+   
    basic dut(/*AUTOINST*/
              // Outputs
              .LEDS                      (LEDS[7:0]),
@@ -65,7 +68,7 @@ module testbench (/*AUTOARG*/) ;
 
 
       repeat(100) @(posedge CLK_IN);      
-      SWITCHES <= 8'hFF;
+      SWITCHES_reg <= 8'hFF;
       $display("SWITCHES ASSERTED @ %d", $time);
       
       

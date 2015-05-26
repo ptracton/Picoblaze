@@ -12,15 +12,15 @@
 
 
 module basic (/*AUTOARG*/
-   // Outputs
-   LEDS,
+   // Inouts
+   SWITCHES, LEDS,
    // Inputs
-   CLK_IN, RESET_IN, SWITCHES
+   CLK_IN, RESET_IN
    ) ;
    input CLK_IN;
    input RESET_IN;
-   input [7:0] SWITCHES;   
-   output [7:0] LEDS;
+   inout [7:0] SWITCHES;   
+   inout [7:0] LEDS;
    
    //
    // Wires and Registers
@@ -90,28 +90,28 @@ module basic (/*AUTOARG*/
                      .port_id(port_id), 
                      .data_in(out_port), 
                      .read_strobe(read_strobe), 
-                     .write_strobe(write_strobe)
-                     ) ;
-
-
+                     .write_strobe(write_strobe));
+   
+   
    //
    // Switches GPIO
    //
+   
    pb_gpio #(.GPIO_BASE_ADDRESS(8))
    gpio_switches(
-                     // Outputs
-                     .data_out(gpio_switches_data_out), 
-                     .interrupt(gpio_switches_interrupt),
-                     // Inouts
-                     .gpio(SWITCHES),
-                     // Inputs
-                     .clk(CLK_OUT), 
-                     .reset(RESET_OUT), 
-                     .port_id(port_id), 
-                     .data_in(out_port), 
-                     .read_strobe(read_strobe), 
-                     .write_strobe(write_strobe)
-                     ) ;   
+                 // Outputs
+                 .data_out(gpio_switches_data_out), 
+                 .interrupt(gpio_switches_interrupt),
+                 // Inouts
+                 .gpio(SWITCHES),
+                 // Inputs
+                 .clk(CLK_OUT), 
+                 .reset(RESET_OUT), 
+                 .port_id(port_id), 
+                 .data_in(out_port), 
+                 .read_strobe(read_strobe), 
+                 .write_strobe(write_strobe));
+   
 
    
    
