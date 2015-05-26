@@ -15,10 +15,11 @@ module basic (/*AUTOARG*/
    // Outputs
    LEDS,
    // Inputs
-   CLK_IN, RESET_IN
+   CLK_IN, RESET_IN, SWITCHES
    ) ;
    input CLK_IN;
    input RESET_IN;
+   input [7:0] SWITCHES;   
    output [7:0] LEDS;
    
    //
@@ -27,16 +28,15 @@ module basic (/*AUTOARG*/
 
    wire [7:0] in_port;
    wire [7:0] LEDS;  
+   wire [7:0] port_id;
+   wire [7:0] out_port;
+   wire [7:0] gpio_switches_data_out;
+   wire [7:0] gpio_leds_data_out;
    
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
    wire                 CLK_OUT;                // From syscon of system_controller.v
    wire                 RESET_OUT;              // From syscon of system_controller.v
-   wire                 interrupt_ack;          // From Picoblaze of cpu.v
-   wire [7:0]           out_port;               // From Picoblaze of cpu.v
-   wire [7:0]           port_id;                // From Picoblaze of cpu.v
-   wire                 read_strobe;            // From Picoblaze of cpu.v
-   wire                 write_strobe;           // From Picoblaze of cpu.v
    // End of automatics
 
    /*AUTOREG*/
@@ -70,8 +70,8 @@ module basic (/*AUTOARG*/
                  .kcpsm6_sleep          (kcpsm6_sleep),
                  .cpu_reset             (RESET_OUT));
 
-   assign in_port = gpio_leds_data_out;
-   assign interrupt = gpio_leds_interrupt;
+   assign in_port = gpio_leds_data_out | gpio_switches_data_out;
+   assign interrupt = gpio_switches_interrupt;
    assign kcpsm6_sleep = 0;   
 
 
@@ -92,6 +92,26 @@ module basic (/*AUTOARG*/
                      .read_strobe(read_strobe), 
                      .write_strobe(write_strobe)
                      ) ;
+
+
+   //
+   // Switches GPIO
+   //
+   pb_gpio #(.GPIO_BASE_ADDRESS(8))
+   gpio_switches(
+                     // Outputs
+                     .data_out(gpio_switches_data_out), 
+                     .interrupt(gpio_switches_interrupt),
+                     // Inouts
+                     .gpio(SWITCHES),
+                     // Inputs
+                     .clk(CLK_OUT), 
+                     .reset(RESET_OUT), 
+                     .port_id(port_id), 
+                     .data_in(out_port), 
+                     .read_strobe(read_strobe), 
+                     .write_strobe(write_strobe)
+                     ) ;   
 
    
    

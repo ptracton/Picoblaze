@@ -14,7 +14,7 @@ module testbench (/*AUTOARG*/) ;
 
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
-   wire [7:0]           LEDS;                   // From dut of basic.v
+
    // End of automatics
    /*AUTOREG*/
  
@@ -37,13 +37,15 @@ module testbench (/*AUTOARG*/) ;
       #1000 RESET_IN <= 0;      
    end
 
-
+   wire [7:0]           LEDS;                   // From dut of basic.v
+   reg [7:0]            SWITCHES = 8'h00;                   // From dut of basic.v
    basic dut(/*AUTOINST*/
              // Outputs
              .LEDS                      (LEDS[7:0]),
              // Inputs
              .CLK_IN                    (CLK_IN),
-             .RESET_IN                  (RESET_IN));
+             .RESET_IN                  (RESET_IN),
+             .SWITCHES                  (SWITCHES[7:0]));
    
 
    //
@@ -61,6 +63,13 @@ module testbench (/*AUTOARG*/) ;
       @(posedge LEDS[7]);
       $display("LEDS ON @ %d", $time);
       
+      SWITCHES <= 8'hFF;
+      $display("SWITCHES ASSERTED @ %d", $time);
+      
+      
+      @(posedge (LEDS == 8'hFF));
+      $display("SWITCHES to LEDS @ %d", $time);
+
       
       repeat(100) @(posedge CLK_IN);      
       $stop;

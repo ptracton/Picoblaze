@@ -33,17 +33,16 @@ module gpio_regs (/*AUTOARG*/
    input [7:0]            gpio_data_in;
 
    output                 interrupt;
-   
-   reg                    interrupt;
-   reg [7:0]              data_out;
+
+   reg                    interrupt  = 0;
+   reg [7:0]              data_out   = 8'h00; 
    
    
    reg [7:0]              gpio_oen      = 8'h00;
    reg [7:0]              gpio_data_out = 8'h00;
    reg [7:0]              gpio_control  = 8'h00;
    reg [7:0]              gpio_irq_mask = 8'h00;
-   reg [7:0]              gpio_irq      = 8'h00;
-   reg [7:0]              gpio_irq_dir = 8'h00;
+   reg [7:0]              gpio_irq      = 8'hFF;
    
    
    //
@@ -53,8 +52,39 @@ module gpio_regs (/*AUTOARG*/
    wire                   gpio_data_in_enable  = (port_id == (GPIO_BASE_ADDRESS + 1));  //Read Only
    wire                   gpio_data_out_enable = (port_id == (GPIO_BASE_ADDRESS + 1));  //Write Only
    wire                   gpio_control_enable  = (port_id == (GPIO_BASE_ADDRESS + 2));
+   wire                   gpio_irq_mask_enable = (port_id == (GPIO_BASE_ADDRESS + 3));
+   wire                   gpio_irq_enable      = (port_id == (GPIO_BASE_ADDRESS + 4));
+   
 
+   //
+   // GPIO Positive Edge detection
+   //
+   reg [7:0]              gpio_data_in_previous;
+   wire [7:0]             gpio_edge_detection = !gpio_data_in_previous & gpio_data_in;
+   always @(posedge clk) begin
+      gpio_data_in_previous <= gpio_data_in;      
+   end
+         
+   //
+   // If a positive edge is happening, capture it as a possible interrupt
+   // Must write a 1 to the bit to clear it
+   //
+   always @(posedge clk)
+     if (gpio_edge_detection) begin
+        gpio_irq <= gpio_edge_detection;        
+     end else if (write_strobe & gpio_irq_enable) begin
+        gpio_irq <= gpio_irq & ~data_in;        
+     end
+   
+   //
+   // Interrupt logic -- capture positive edge and mask bit is clear
+   //
 
+   always @(posedge clk)
+     if (gpio_irq & ~gpio_irq_mask) begin
+        interrupt <= 1'b1;        
+     end
+   
    //
    // Register Writing
    //
@@ -71,6 +101,10 @@ module gpio_regs (/*AUTOARG*/
         if (gpio_control_enable) begin
            gpio_control <= data_in;           
         end        
+
+        if (gpio_irq_mask_enable) begin
+           gpio_irq_mask <= data_in;           
+        end 
         
      end
 
@@ -92,6 +126,14 @@ module gpio_regs (/*AUTOARG*/
          else if (gpio_control_enable) begin
             data_out <= gpio_control;           
          end
+
+         else if (gpio_irq_mask_enable) begin
+            data_out <= gpio_irq_mask;           
+         end
+         
+         else if (gpio_irq_enable) begin
+            data_out <= gpio_irq;           
+         end
          
          else begin
             data_out <= 8'h00;            
@@ -100,10 +142,6 @@ module gpio_regs (/*AUTOARG*/
       end // if (read_strobe)
    end // always @ (posedge clk)
 
-   //
-   // Interrupt logic
-   //
-   always @(posedge clk)
-     interrupt <= 1'b0;   
+ 
    
 endmodule // gpio_regs

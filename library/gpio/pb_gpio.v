@@ -37,7 +37,8 @@ module pb_gpio (/*AUTOARG*/
    wire [7:0]             gpio_data_in;
    wire [7:0]             gpio_data_out;
    
-   gpio_regs regs(/*AUTOINST*/
+   gpio_regs #(.GPIO_BASE_ADDRESS(GPIO_BASE_ADDRESS))
+   regs(/*AUTOINST*/
                   // Outputs
                   .data_out             (data_out[7:0]),
                   .gpio_oen             (gpio_oen[7:0]),

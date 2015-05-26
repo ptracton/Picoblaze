@@ -6,12 +6,20 @@
         CONSTANT LEDS_OEN, 00
         CONSTANT LEDS_OUT, 01
         CONSTANT LEDS_CONTROL, 02
+
+        CONSTANT SWITCHES_OEN, 08
+        CONSTANT SWITCHES_IN,  09
+        CONSTANT SWITCHES_CONTROL,  0A
+        CONSTANT SWITCHES_IRQ_MASK, 0B
+        CONSTANT SWITCHES_IRQ,      0C
         
 start:
         LOAD s0, FF
         output S0, LEDS_OEN
-        
-drive_leds:
+
+        LOAD s0, 00
+        output S0, SWITCHES_OEN        
+
         load S0, 01
         output S0, LEDS_OUT
         load S0, 02
@@ -27,5 +35,11 @@ drive_leds:
         load S0, 40
         output S0, LEDS_OUT
         load S0, 80
-        output S0, LEDS_OUT        
-        JUMP drive_leds
+        output S0, LEDS_OUT
+        load S0, 00
+        output S0, LEDS_OUT
+        
+ loop:
+         input S1, SWITCHES_IN
+         output S1, LEDS_OUT
+         JUMP loop
