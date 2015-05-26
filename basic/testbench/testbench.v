@@ -62,7 +62,9 @@ module testbench (/*AUTOARG*/) ;
 
       @(posedge LEDS[7]);
       $display("LEDS ON @ %d", $time);
-      
+
+
+      repeat(100) @(posedge CLK_IN);      
       SWITCHES <= 8'hFF;
       $display("SWITCHES ASSERTED @ %d", $time);
       

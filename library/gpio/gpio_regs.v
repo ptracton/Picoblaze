@@ -41,8 +41,8 @@ module gpio_regs (/*AUTOARG*/
    reg [7:0]              gpio_oen      = 8'h00;
    reg [7:0]              gpio_data_out = 8'h00;
    reg [7:0]              gpio_control  = 8'h00;
-   reg [7:0]              gpio_irq_mask = 8'h00;
-   reg [7:0]              gpio_irq      = 8'hFF;
+   reg [7:0]              gpio_irq_mask = 8'hFF;
+   reg [7:0]              gpio_irq      = 8'h00;
    
    
    //
@@ -59,7 +59,7 @@ module gpio_regs (/*AUTOARG*/
    //
    // GPIO Positive Edge detection
    //
-   reg [7:0]              gpio_data_in_previous;
+   reg [7:0]              gpio_data_in_previous = 1'b0;
    wire [7:0]             gpio_edge_detection = !gpio_data_in_previous & gpio_data_in;
    always @(posedge clk) begin
       gpio_data_in_previous <= gpio_data_in;      
@@ -83,6 +83,8 @@ module gpio_regs (/*AUTOARG*/
    always @(posedge clk)
      if (gpio_irq & ~gpio_irq_mask) begin
         interrupt <= 1'b1;        
+     end else begin
+        interrupt <= 1'b0;        
      end
    
    //
@@ -113,7 +115,7 @@ module gpio_regs (/*AUTOARG*/
    //
    always @(posedge clk) begin
 
-      if (read_strobe) begin
+//      if (read_strobe) begin
          
          if (gpio_oen_enable) begin
             data_out <= gpio_oen;           
@@ -139,7 +141,7 @@ module gpio_regs (/*AUTOARG*/
             data_out <= 8'h00;            
          end
          
-      end // if (read_strobe)
+//      end // if (read_strobe)
    end // always @ (posedge clk)
 
  

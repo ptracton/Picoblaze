@@ -19,7 +19,10 @@ start:
 
         LOAD s0, 00
         output S0, SWITCHES_OEN        
-
+        
+        LOAD s0, 00
+        output S0, SWITCHES_IRQ_MASK
+        
         load S0, 01
         output S0, LEDS_OUT
         load S0, 02
@@ -38,8 +41,18 @@ start:
         output S0, LEDS_OUT
         load S0, 00
         output S0, LEDS_OUT
+
+        ENABLE INTERRUPT
         
  loop:
-         input S1, SWITCHES_IN
-         output S1, LEDS_OUT
+      
          JUMP loop
+
+IRQ_HANDLER:
+        input S1, SWITCHES_IN
+        output  S1, SWITCHES_IRQ
+        output S1, LEDS_OUT        
+        RETURNI ENABLE
+        
+        address 3FF
+        jump IRQ_HANDLER
