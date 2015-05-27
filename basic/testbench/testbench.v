@@ -73,8 +73,15 @@ module testbench (/*AUTOARG*/) ;
       
       
       @(posedge (LEDS == 8'hFF));
-      $display("SWITCHES to LEDS @ %d", $time);
+      $display("SWITCHES to LEDS FF @ %d", $time);
 
+      SWITCHES_reg <= 8'h00;
+      @(posedge (LEDS == 8'h00));
+      $display("SWITCHES to LEDS 00 @ %d", $time);
+
+      SWITCHES_reg <= 8'hFF;
+      @(posedge (LEDS == 8'hFF));
+      $display("SWITCHES to LEDS FF @ %d", $time);
       
       repeat(100) @(posedge CLK_IN);      
       $stop;

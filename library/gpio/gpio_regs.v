@@ -57,10 +57,10 @@ module gpio_regs (/*AUTOARG*/
    
 
    //
-   // GPIO Positive Edge detection
+   // GPIO Edge Change detection
    //
    reg [7:0]              gpio_data_in_previous = 1'b0;
-   wire [7:0]             gpio_edge_detection = !gpio_data_in_previous & gpio_data_in;
+   wire [7:0]             gpio_edge_detection = gpio_data_in_previous ^ gpio_data_in;
    always @(posedge clk) begin
       gpio_data_in_previous <= gpio_data_in;      
    end
