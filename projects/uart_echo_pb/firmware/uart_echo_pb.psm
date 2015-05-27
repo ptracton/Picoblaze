@@ -1,0 +1,27 @@
+        ;; Picoblaze UART Echo Program
+        ;;
+        ;; Look at https://code.google.com/p/opbasm/
+        ;; 
+        
+        CONSTANT UART_DATA_IN,   00
+        CONSTANT UART_DATA_OUT,  00
+        CONSTANT UART_CONTROL,   01
+        CONSTANT UART_STATUS,    02
+        CONSTANT UART_IRQ_MASK,  03
+        CONSTANT UART_IRQ,       04
+        CONSTANT UART_CLOCK_DIVIDE_LOWER,  05
+        CONSTANT UART_CLOCK_DIVIDE_UPPER,  06    
+        
+start:
+        ENABLE INTERRUPT
+        
+ loop:
+      
+         JUMP loop
+
+IRQ_HANDLER:
+         
+        RETURNI ENABLE
+        
+        address 3FF
+        jump IRQ_HANDLER

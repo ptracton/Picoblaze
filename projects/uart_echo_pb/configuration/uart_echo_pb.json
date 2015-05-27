@@ -1,0 +1,37 @@
+{
+    "project":"Basic Picoblaze Project",
+    "flow_steps": {
+	"1" : "clean",
+    "2" : "compile",
+	"3" : "xvlog",
+    "4" : "xelab",
+    "5" : "xsim"
+    },
+    "flow" : {
+	"clean" :{
+	    "executable" : "rm",
+	    "arguments" : "-rf *.log *.pb *~ webtalk* xsim* *.fmt *.mem ../firmware/*.fmt ../firmware/basic_00.v ../firmware/*.log ../firmware/*.mem ../firmware/*.fmt"
+	},
+    "compile":{
+        "executable": "opbasm",
+        "arguments": "--input=../firmware/basic_00.psm --template=../firmware/ROM_form.v --pb6 --color-log --outdir=. --name=basic_rom "
+    },
+	"xvlog" :{
+	    "executable" : "xvlog",
+        "arguments" : " -prj sim.f"
+	},
+    "xelab" :{
+        "executable":"xelab",
+        "arguments" : "work.glbl work.testbench -L unisims_ver -L unimacro_ver -L xilinxcorelib_ver -prj sim.f -log elaborate.log -debug all --timescale 1ns/1ns"
+    },
+	"xsim" : {
+	    "executable": "xsim",
+	    "arguments" : " -tclbatch testbench.tcl work.glbl#work.testbench -log simulate.log",
+        "gui" : " -g --view work.glbl#work.testbench.wcfg"
+	},
+	"run" : {
+	    "executable" : "./a.out",
+	    "arguments"  : " "
+	}
+    }
+}
