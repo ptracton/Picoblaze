@@ -60,8 +60,8 @@ module testbench (/*AUTOARG*/) ;
       @(negedge RESET_IN);
       $display("RESET: De-Asserted @ %d", $time);
 
-      @(posedge testbench.dut.syscon.LOCKED);
-      $display("DCM LOCKED @ %d", $time);
+//      @(posedge testbench.dut.syscon.LOCKED);
+//      $display("DCM LOCKED @ %d", $time);
 
       @(posedge LEDS[7]);
       $display("LEDS ON @ %d", $time);

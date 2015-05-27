@@ -51,8 +51,9 @@ module basic (/*AUTOARG*/
                             // Inputs
                             .CLK_IN             (CLK_IN),
                             .RESET_IN           (RESET_IN));
+//   assign CLK_OUT = CLK_IN;
+//   assign RESET_OUT = RESET_IN;
    
-
    //
    // Picoblaze CPU
    //

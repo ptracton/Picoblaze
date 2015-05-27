@@ -48,14 +48,19 @@ module system_controller(
    // This is the ONLY place we use xclk_buf or XRESET!
    //
    wire                         LOCKED;
+
+   assign RESET_OUT = RESET_IN;   
+   
    //   assign dcm_reset = |reset_count;   
+/* -----\/----- EXCLUDED -----\/-----
    assign RESET_OUT = !LOCKED || (|reset_count);
    always @(posedge xclk_buf)
      if (RESET_IN)
        reset_count <= 'h01;
      else
-       if ( (|reset_count) & XREADY)
+       if ( (|reset_count) & LOCKED)
          reset_count <= reset_count +1;
+ -----/\----- EXCLUDED -----/\----- */
    
    //
    // DCM Reset Logic.  This is also off the xclk_buf since
@@ -64,6 +69,7 @@ module system_controller(
    //
    // This is the ONLY place we use xclk_buf or XRESET!
    //
+/* -----\/----- EXCLUDED -----\/-----
    reg [3:0]                    dcm_reset_count = 4'h00;   
    assign dcm_reset = |dcm_reset_count;
    always @(posedge xclk_buf)
@@ -72,11 +78,11 @@ module system_controller(
      else
        if (dcm_reset_count)
          dcm_reset_count <= dcm_reset_count + 1;     
+ -----/\----- EXCLUDED -----/\----- */
    
    //   
    // Clock buffer that ensures the clock going out to the hardware is on a low skew line
    //
-   assign XREADY = LOCKED;   
    BUFG clk_bug (
                  .O(CLK_OUT), // 1-bit output Clock buffer output
                  .I(CLKFBOUT) // 1-bit input Clock buffer input (S=0)
@@ -165,7 +171,8 @@ module system_controller(
                      // Control Ports: 1-bit (each) input: MMCM control ports
                      .PWRDWN(1'b0),
                      // 1-bit input: Power-down
-                     .RST(dcm_reset),
+//                     .RST(dcm_reset),
+                     .RST(RESET_IN),
                      // 1-bit input: Reset
                      // Feedback Clocks: 1-bit (each) input: Clock feedback ports
                      .CLKFBIN(CLK_OUT)
@@ -176,16 +183,5 @@ module system_controller(
 
 endmodule // system_control
 
-/*
- // Template
- 
- system_control sys_con(
- .XCLK(),
- .XRESET(),
- .XREADY(),
- .clk(),
- .reset()
- );
- */
 
 
