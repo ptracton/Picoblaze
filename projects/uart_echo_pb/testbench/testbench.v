@@ -30,6 +30,26 @@ module testbench (/*AUTOARG*/) ;
    end
 
    //
+   // Free Running 50 MHz Clock
+   //
+   reg clk_tb;
+
+   parameter   _clk_50mhz_high = 10,
+     _clk_50mhz_low  = 10,
+     _clk_50mhz_period = _clk_50mhz_high + _clk_50mhz_low;
+
+   initial
+     begin
+        clk_tb <= 'b0;
+        forever
+          begin
+             #(_clk_50mhz_low)  clk_tb = 1;
+             #(_clk_50mhz_high) clk_tb = 0;
+          end
+     end
+
+   
+   //
    // Reset
    //
    reg RESET_IN = 0;
@@ -38,6 +58,17 @@ module testbench (/*AUTOARG*/) ;
       #1000 RESET_IN <= 0;      
    end
 
+   //
+   // Asynch. Reset to device
+   //
+   reg reset_tb;
+   initial
+     begin
+        reset_tb = 0;
+        #1    reset_tb = 1;
+        #200  reset_tb = 0;
+     end
+   
    reg [31:0]           read_word;
    
    uart_echo_pb dut(/*AUTOINST*/
@@ -69,7 +100,7 @@ module testbench (/*AUTOARG*/) ;
 
    uart_top uart0(
                   .wb_clk_i(CLK_IN),
-                  .wb_rst_i(RESET_IN),
+                  .wb_rst_i(reset_tb),
 
                   .wb_adr_i(uart0_adr[4:0]),
                   .wb_dat_o(uart0_dat_o),
@@ -96,7 +127,7 @@ module testbench (/*AUTOARG*/) ;
 
    wb_mast uart_master0(
                         .clk (CLK_IN),
-                        .rst (RESET_IN),
+                        .rst (reset_tb),
                         .adr (uart0_adr),
                         .din (uart0_dat_o),
                         .dout(uart0_dat_i),
@@ -124,8 +155,21 @@ module testbench (/*AUTOARG*/) ;
 
       repeat(100) @(posedge CLK_IN);
       `UART_CONFIG;
-      `UART_WRITE_CHAR(8'h31);
-      `UART_READ_CHAR(8'h31);
+
+      `UART_WRITE_CHAR("A");
+      `UART_WRITE_CHAR("B");
+      `UART_WRITE_CHAR("C");
+      `UART_WRITE_CHAR("D");
+      `UART_WRITE_CHAR("E");
+
+      repeat(100)@(posedge clk_tb);
+
+      `UART_READ_CHAR("A");
+      `UART_READ_CHAR("B");
+      `UART_READ_CHAR("C");
+      `UART_READ_CHAR("D");
+      `UART_READ_CHAR("E");
+      
       
       
       repeat(100) @(posedge CLK_IN);      

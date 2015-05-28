@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="12" />
    <wvobject type="group" fp_name="group15">
       <obj_property name="label">TESTBENCH</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -29,22 +29,27 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/read_word">
          <obj_property name="ElementShortName">read_word[31:0]</obj_property>
          <obj_property name="ObjectShortName">read_word[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0_adr">
          <obj_property name="ElementShortName">uart0_adr[31:0]</obj_property>
          <obj_property name="ObjectShortName">uart0_adr[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0_dat_o">
          <obj_property name="ElementShortName">uart0_dat_o[31:0]</obj_property>
          <obj_property name="ObjectShortName">uart0_dat_o[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0_dat_i">
          <obj_property name="ElementShortName">uart0_dat_i[31:0]</obj_property>
          <obj_property name="ObjectShortName">uart0_dat_i[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0_sel">
          <obj_property name="ElementShortName">uart0_sel[3:0]</obj_property>
          <obj_property name="ObjectShortName">uart0_sel[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0_cyc">
          <obj_property name="ElementShortName">uart0_cyc</obj_property>
@@ -101,18 +106,22 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/port_id">
          <obj_property name="ElementShortName">port_id[7:0]</obj_property>
          <obj_property name="ObjectShortName">port_id[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/out_port">
          <obj_property name="ElementShortName">out_port[7:0]</obj_property>
          <obj_property name="ObjectShortName">out_port[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/in_port">
          <obj_property name="ElementShortName">in_port[7:0]</obj_property>
          <obj_property name="ObjectShortName">in_port[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart_data_out">
          <obj_property name="ElementShortName">uart_data_out[7:0]</obj_property>
          <obj_property name="ObjectShortName">uart_data_out[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/write_strobe">
          <obj_property name="ElementShortName">write_strobe</obj_property>
@@ -145,10 +154,12 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/address">
          <obj_property name="ElementShortName">address[11:0]</obj_property>
          <obj_property name="ObjectShortName">address[11:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/instruction">
          <obj_property name="ElementShortName">instruction[17:0]</obj_property>
          <obj_property name="ObjectShortName">instruction[17:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/bram_enable">
          <obj_property name="ElementShortName">bram_enable</obj_property>
@@ -157,14 +168,17 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/in_port">
          <obj_property name="ElementShortName">in_port[7:0]</obj_property>
          <obj_property name="ObjectShortName">in_port[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/out_port">
          <obj_property name="ElementShortName">out_port[7:0]</obj_property>
          <obj_property name="ObjectShortName">out_port[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/port_id">
          <obj_property name="ElementShortName">port_id[7:0]</obj_property>
          <obj_property name="ObjectShortName">port_id[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/write_strobe">
          <obj_property name="ElementShortName">write_strobe</obj_property>
@@ -211,10 +225,12 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/sim_s0">
          <obj_property name="ElementShortName">sim_s0[7:0]</obj_property>
          <obj_property name="ObjectShortName">sim_s0[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/sim_s1">
          <obj_property name="ElementShortName">sim_s1[7:0]</obj_property>
          <obj_property name="ObjectShortName">sim_s1[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group99">
@@ -247,10 +263,12 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/data_in">
          <obj_property name="ElementShortName">data_in[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/data_out">
          <obj_property name="ElementShortName">data_out[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/enable">
          <obj_property name="ElementShortName">enable</obj_property>
@@ -263,6 +281,7 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/port_id">
          <obj_property name="ElementShortName">port_id[7:0]</obj_property>
          <obj_property name="ObjectShortName">port_id[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/read_strobe">
          <obj_property name="ElementShortName">read_strobe</obj_property>
@@ -299,14 +318,17 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/uart_clock_divide">
          <obj_property name="ElementShortName">uart_clock_divide[15:0]</obj_property>
          <obj_property name="ObjectShortName">uart_clock_divide[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/uart_data_read">
          <obj_property name="ElementShortName">uart_data_read[7:0]</obj_property>
          <obj_property name="ObjectShortName">uart_data_read[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/uart_data_write">
          <obj_property name="ElementShortName">uart_data_write[7:0]</obj_property>
          <obj_property name="ObjectShortName">uart_data_write[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/write_strobe">
          <obj_property name="ElementShortName">write_strobe</obj_property>
@@ -359,10 +381,12 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/data_in">
          <obj_property name="ElementShortName">data_in[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/data_out">
          <obj_property name="ElementShortName">data_out[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/enable">
          <obj_property name="ElementShortName">enable</obj_property>
@@ -375,6 +399,7 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/port_id">
          <obj_property name="ElementShortName">port_id[7:0]</obj_property>
          <obj_property name="ObjectShortName">port_id[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/read_strobe">
          <obj_property name="ElementShortName">read_strobe</obj_property>
@@ -411,6 +436,7 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_clock_divide">
          <obj_property name="ElementShortName">uart_clock_divide[15:0]</obj_property>
          <obj_property name="ObjectShortName">uart_clock_divide[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_clock_divide_lower_enable">
          <obj_property name="ElementShortName">uart_clock_divide_lower_enable</obj_property>
@@ -423,6 +449,7 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_control">
          <obj_property name="ElementShortName">uart_control[7:0]</obj_property>
          <obj_property name="ObjectShortName">uart_control[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_control_enable">
          <obj_property name="ElementShortName">uart_control_enable</obj_property>
@@ -439,18 +466,24 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_data_read">
          <obj_property name="ElementShortName">uart_data_read[7:0]</obj_property>
          <obj_property name="ObjectShortName">uart_data_read[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_data_read_reg">
          <obj_property name="ElementShortName">uart_data_read_reg[7:0]</obj_property>
          <obj_property name="ObjectShortName">uart_data_read_reg[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_data_write">
          <obj_property name="ElementShortName">uart_data_write[7:0]</obj_property>
          <obj_property name="ObjectShortName">uart_data_write[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_irq">
          <obj_property name="ElementShortName">uart_irq[2:0]</obj_property>
          <obj_property name="ObjectShortName">uart_irq[2:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_irq_enable">
          <obj_property name="ElementShortName">uart_irq_enable</obj_property>
@@ -511,10 +544,12 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/data">
          <obj_property name="ElementShortName">data[7:0]</obj_property>
          <obj_property name="ObjectShortName">data[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/data_out">
          <obj_property name="ElementShortName">data_out[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/data_present_int">
          <obj_property name="ElementShortName">data_present_int</obj_property>
@@ -527,10 +562,12 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/data_value">
          <obj_property name="ElementShortName">data_value[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_value[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/div">
          <obj_property name="ElementShortName">div[3:0]</obj_property>
          <obj_property name="ObjectShortName">div[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/div_carry">
          <obj_property name="ElementShortName">div_carry</obj_property>
@@ -539,6 +576,7 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/div_value">
          <obj_property name="ElementShortName">div_value[3:0]</obj_property>
          <obj_property name="ObjectShortName">div_value[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/en_16_x_baud">
          <obj_property name="ElementShortName">en_16_x_baud</obj_property>
@@ -555,10 +593,12 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/pointer">
          <obj_property name="ElementShortName">pointer[3:0]</obj_property>
          <obj_property name="ObjectShortName">pointer[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/pointer_value">
          <obj_property name="ElementShortName">pointer_value[3:0]</obj_property>
          <obj_property name="ObjectShortName">pointer_value[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/run">
          <obj_property name="ElementShortName">run</obj_property>
@@ -595,6 +635,8 @@
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/serial_in">
          <obj_property name="ElementShortName">serial_in</obj_property>
          <obj_property name="ObjectShortName">serial_in</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/start_bit">
          <obj_property name="ElementShortName">start_bit</obj_property>
@@ -655,10 +697,12 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/data">
          <obj_property name="ElementShortName">data[7:0]</obj_property>
          <obj_property name="ObjectShortName">data[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/data_in">
          <obj_property name="ElementShortName">data_in[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/data_present_int">
          <obj_property name="ElementShortName">data_present_int</obj_property>
@@ -675,6 +719,7 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/div_value">
          <obj_property name="ElementShortName">div_value[3:0]</obj_property>
          <obj_property name="ObjectShortName">div_value[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/en_16_x_baud">
          <obj_property name="ElementShortName">en_16_x_baud</obj_property>
@@ -711,10 +756,12 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/pointer">
          <obj_property name="ElementShortName">pointer[3:0]</obj_property>
          <obj_property name="ObjectShortName">pointer[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/pointer_value">
          <obj_property name="ElementShortName">pointer_value[3:0]</obj_property>
          <obj_property name="ObjectShortName">pointer_value[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/serial_data">
          <obj_property name="ElementShortName">serial_data</obj_property>
@@ -727,18 +774,456 @@
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/sm">
          <obj_property name="ElementShortName">sm[3:0]</obj_property>
          <obj_property name="ObjectShortName">sm[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/sm_value">
          <obj_property name="ElementShortName">sm_value[3:0]</obj_property>
          <obj_property name="ObjectShortName">sm_value[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/store_data">
          <obj_property name="ElementShortName">store_data[7:0]</obj_property>
          <obj_property name="ObjectShortName">store_data[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/zero">
          <obj_property name="ElementShortName">zero</obj_property>
          <obj_property name="ObjectShortName">zero</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group559">
+      <obj_property name="label">WB MASTER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart_master0/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart_master0/rst">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart_master0/din">
+         <obj_property name="ElementShortName">din[31:0]</obj_property>
+         <obj_property name="ObjectShortName">din[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart_master0/ack">
+         <obj_property name="ElementShortName">ack</obj_property>
+         <obj_property name="ObjectShortName">ack</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart_master0/err">
+         <obj_property name="ElementShortName">err</obj_property>
+         <obj_property name="ObjectShortName">err</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart_master0/rty">
+         <obj_property name="ElementShortName">rty</obj_property>
+         <obj_property name="ObjectShortName">rty</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart_master0/adr">
+         <obj_property name="ElementShortName">adr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">adr[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart_master0/dout">
+         <obj_property name="ElementShortName">dout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart_master0/cyc">
+         <obj_property name="ElementShortName">cyc</obj_property>
+         <obj_property name="ObjectShortName">cyc</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart_master0/stb">
+         <obj_property name="ElementShortName">stb</obj_property>
+         <obj_property name="ObjectShortName">stb</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart_master0/sel">
+         <obj_property name="ElementShortName">sel[3:0]</obj_property>
+         <obj_property name="ObjectShortName">sel[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart_master0/we">
+         <obj_property name="ElementShortName">we</obj_property>
+         <obj_property name="ObjectShortName">we</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group599">
+      <obj_property name="label">WB UART</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_clk_i">
+         <obj_property name="ElementShortName">wb_clk_i</obj_property>
+         <obj_property name="ObjectShortName">wb_clk_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_rst_i">
+         <obj_property name="ElementShortName">wb_rst_i</obj_property>
+         <obj_property name="ObjectShortName">wb_rst_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_we_i">
+         <obj_property name="ElementShortName">wb_we_i</obj_property>
+         <obj_property name="ObjectShortName">wb_we_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_stb_i">
+         <obj_property name="ElementShortName">wb_stb_i</obj_property>
+         <obj_property name="ObjectShortName">wb_stb_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_cyc_i">
+         <obj_property name="ElementShortName">wb_cyc_i</obj_property>
+         <obj_property name="ObjectShortName">wb_cyc_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_ack_o">
+         <obj_property name="ElementShortName">wb_ack_o</obj_property>
+         <obj_property name="ObjectShortName">wb_ack_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/int_o">
+         <obj_property name="ElementShortName">int_o</obj_property>
+         <obj_property name="ObjectShortName">int_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/srx_pad_i">
+         <obj_property name="ElementShortName">srx_pad_i</obj_property>
+         <obj_property name="ObjectShortName">srx_pad_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/cts_pad_i">
+         <obj_property name="ElementShortName">cts_pad_i</obj_property>
+         <obj_property name="ObjectShortName">cts_pad_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/dsr_pad_i">
+         <obj_property name="ElementShortName">dsr_pad_i</obj_property>
+         <obj_property name="ObjectShortName">dsr_pad_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/ri_pad_i">
+         <obj_property name="ElementShortName">ri_pad_i</obj_property>
+         <obj_property name="ObjectShortName">ri_pad_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/dcd_pad_i">
+         <obj_property name="ElementShortName">dcd_pad_i</obj_property>
+         <obj_property name="ObjectShortName">dcd_pad_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/baud_o">
+         <obj_property name="ElementShortName">baud_o</obj_property>
+         <obj_property name="ObjectShortName">baud_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/stx_pad_o">
+         <obj_property name="ElementShortName">stx_pad_o</obj_property>
+         <obj_property name="ObjectShortName">stx_pad_o</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/rts_pad_o">
+         <obj_property name="ElementShortName">rts_pad_o</obj_property>
+         <obj_property name="ObjectShortName">rts_pad_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/dtr_pad_o">
+         <obj_property name="ElementShortName">dtr_pad_o</obj_property>
+         <obj_property name="ObjectShortName">dtr_pad_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_adr_i">
+         <obj_property name="ElementShortName">wb_adr_i[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_adr_i[4:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_dat_i">
+         <obj_property name="ElementShortName">wb_dat_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_i[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_dat_o">
+         <obj_property name="ElementShortName">wb_dat_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_o[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_dat8_i">
+         <obj_property name="ElementShortName">wb_dat8_i[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat8_i[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_dat8_o">
+         <obj_property name="ElementShortName">wb_dat8_o[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat8_o[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_dat32_o">
+         <obj_property name="ElementShortName">wb_dat32_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat32_o[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_sel_i">
+         <obj_property name="ElementShortName">wb_sel_i[3:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_sel_i[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_adr_int">
+         <obj_property name="ElementShortName">wb_adr_int[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_adr_int[4:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/we_o">
+         <obj_property name="ElementShortName">we_o</obj_property>
+         <obj_property name="ObjectShortName">we_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/re_o">
+         <obj_property name="ElementShortName">re_o</obj_property>
+         <obj_property name="ObjectShortName">re_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/ier">
+         <obj_property name="ElementShortName">ier[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ier[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/iir">
+         <obj_property name="ElementShortName">iir[3:0]</obj_property>
+         <obj_property name="ObjectShortName">iir[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/fcr">
+         <obj_property name="ElementShortName">fcr[1:0]</obj_property>
+         <obj_property name="ObjectShortName">fcr[1:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/mcr">
+         <obj_property name="ElementShortName">mcr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">mcr[4:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/lcr">
+         <obj_property name="ElementShortName">lcr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">lcr[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/msr">
+         <obj_property name="ElementShortName">msr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">msr[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/lsr">
+         <obj_property name="ElementShortName">lsr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">lsr[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/rf_count">
+         <obj_property name="ElementShortName">rf_count[4:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_count[4:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/tf_count">
+         <obj_property name="ElementShortName">tf_count[4:0]</obj_property>
+         <obj_property name="ObjectShortName">tf_count[4:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/tstate">
+         <obj_property name="ElementShortName">tstate[2:0]</obj_property>
+         <obj_property name="ObjectShortName">tstate[2:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/rstate">
+         <obj_property name="ElementShortName">rstate[3:0]</obj_property>
+         <obj_property name="ObjectShortName">rstate[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/uart_data_width">
+         <obj_property name="ElementShortName">uart_data_width[31:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_data_width[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/uart_addr_width">
+         <obj_property name="ElementShortName">uart_addr_width[31:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_addr_width[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group1787">
+      <obj_property name="label">WB UART REGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/regs/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/regs/int_o">
+         <obj_property name="ElementShortName">int_o</obj_property>
+         <obj_property name="ObjectShortName">int_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/wb_addr_i">
+         <obj_property name="ElementShortName">wb_addr_i[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_addr_i[4:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/regs/wb_rst_i">
+         <obj_property name="ElementShortName">wb_rst_i</obj_property>
+         <obj_property name="ObjectShortName">wb_rst_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/regs/wb_we_i">
+         <obj_property name="ElementShortName">wb_we_i</obj_property>
+         <obj_property name="ObjectShortName">wb_we_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/wb_dat_i">
+         <obj_property name="ElementShortName">wb_dat_i[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_i[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/regs/wb_re_i">
+         <obj_property name="ElementShortName">wb_re_i</obj_property>
+         <obj_property name="ObjectShortName">wb_re_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/wb_dat_o">
+         <obj_property name="ElementShortName">wb_dat_o[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_o[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/ier">
+         <obj_property name="ElementShortName">ier[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ier[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/iir">
+         <obj_property name="ElementShortName">iir[3:0]</obj_property>
+         <obj_property name="ObjectShortName">iir[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/fcr">
+         <obj_property name="ElementShortName">fcr[1:0]</obj_property>
+         <obj_property name="ObjectShortName">fcr[1:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/mcr">
+         <obj_property name="ElementShortName">mcr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">mcr[4:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/lcr">
+         <obj_property name="ElementShortName">lcr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">lcr[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/msr">
+         <obj_property name="ElementShortName">msr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">msr[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/dl">
+         <obj_property name="ElementShortName">dl[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dl[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/regs/dlc">
+         <obj_property name="ElementShortName">dlc[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dlc[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2317">
+      <obj_property name="label">WB UART WB IF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/wb_rst_i">
+         <obj_property name="ElementShortName">wb_rst_i</obj_property>
+         <obj_property name="ObjectShortName">wb_rst_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/wb_we_i">
+         <obj_property name="ElementShortName">wb_we_i</obj_property>
+         <obj_property name="ObjectShortName">wb_we_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/wb_stb_i">
+         <obj_property name="ElementShortName">wb_stb_i</obj_property>
+         <obj_property name="ObjectShortName">wb_stb_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/wb_cyc_i">
+         <obj_property name="ElementShortName">wb_cyc_i</obj_property>
+         <obj_property name="ObjectShortName">wb_cyc_i</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_adr_i">
+         <obj_property name="ElementShortName">wb_adr_i[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_adr_i[4:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_dat_o">
+         <obj_property name="ElementShortName">wb_dat_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_o[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_dat_i">
+         <obj_property name="ElementShortName">wb_dat_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_i[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_dat_is">
+         <obj_property name="ElementShortName">wb_dat_is[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_is[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_dat32_o">
+         <obj_property name="ElementShortName">wb_dat32_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat32_o[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/re_o">
+         <obj_property name="ElementShortName">re_o</obj_property>
+         <obj_property name="ObjectShortName">re_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/we_o">
+         <obj_property name="ElementShortName">we_o</obj_property>
+         <obj_property name="ObjectShortName">we_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/wb_ack_o">
+         <obj_property name="ElementShortName">wb_ack_o</obj_property>
+         <obj_property name="ObjectShortName">wb_ack_o</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_dat8_i">
+         <obj_property name="ElementShortName">wb_dat8_i[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat8_i[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_dat8_o">
+         <obj_property name="ElementShortName">wb_dat8_o[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat8_o[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_adr_int">
+         <obj_property name="ElementShortName">wb_adr_int[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_adr_int[4:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_adr_is">
+         <obj_property name="ElementShortName">wb_adr_is[4:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_adr_is[4:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/wb_we_is">
+         <obj_property name="ElementShortName">wb_we_is</obj_property>
+         <obj_property name="ObjectShortName">wb_we_is</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/wb_cyc_is">
+         <obj_property name="ElementShortName">wb_cyc_is</obj_property>
+         <obj_property name="ObjectShortName">wb_cyc_is</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/wb_stb_is">
+         <obj_property name="ElementShortName">wb_stb_is</obj_property>
+         <obj_property name="ObjectShortName">wb_stb_is</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_sel_is">
+         <obj_property name="ElementShortName">wb_sel_is[3:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_sel_is[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_sel_i">
+         <obj_property name="ElementShortName">wb_sel_i[3:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_sel_i[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0/wb_interface/wre">
+         <obj_property name="ElementShortName">wre</obj_property>
+         <obj_property name="ObjectShortName">wre</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wbstate">
+         <obj_property name="ElementShortName">wbstate[1:0]</obj_property>
+         <obj_property name="ObjectShortName">wbstate[1:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0/wb_interface/wb_adr_int_lsb">
+         <obj_property name="ElementShortName">wb_adr_int_lsb[1:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_adr_int_lsb[1:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

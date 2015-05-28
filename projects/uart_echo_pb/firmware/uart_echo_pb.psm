@@ -13,7 +13,7 @@
         CONSTANT UART_CLOCK_DIVIDE_UPPER,  06    
         
 start:
-        load S0, D9
+        load S0, 35
         output S0, UART_CLOCK_DIVIDE_LOWER
         ENABLE INTERRUPT
         

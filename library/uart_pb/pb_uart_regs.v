@@ -75,6 +75,12 @@ module pb_uart_regs (/*AUTOARG*/
    reg [7:0]              uart_data_read_reg   = 8'h00;
    reg [7:0]              data_out             = 8'h00;
    reg                    interrupt            = 1'b0;
+
+   //
+   // Interrupt Logic
+   //
+   always @(posedge clk)
+     interrupt <= rx_data_present;
    
    //
    // Register Writing
@@ -117,11 +123,9 @@ module pb_uart_regs (/*AUTOARG*/
       if (uart_data_out_enable) begin
          data_out <= uart_data_read;         
          buffer_read <= 1'b1;           
-      end else begin
-         buffer_read <= 1'b0;           
-      end
+      end 
 
-      if (uart_control_enable) begin
+      else if (uart_control_enable) begin
          data_out <= uart_control;           
       end
 
@@ -146,7 +150,8 @@ module pb_uart_regs (/*AUTOARG*/
       end  
 
       else begin
-         data_out <= 8'h00;         
+         data_out <= 8'h00;   
+         buffer_read <= 1'b0;                 
       end
       
    end // always @ (posedge clk)   

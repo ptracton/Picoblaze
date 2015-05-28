@@ -36,7 +36,8 @@ module uart_tasks;
 
          @(posedge `UART_CLK);
          //Baud Rate LSB
-         `UART_MASTER0.wb_wr1(32'hFFFF0000,    4'h0, 32'h0000001A); //115200bps from 50 MHz
+         //`UART_MASTER0.wb_wr1(32'hFFFF0000,    4'h0, 32'h0000001A); //115200bps from 50 MHz
+         `UART_MASTER0.wb_wr1(32'hFFFF0000,    4'h0, 32'h00000035); //115200bps from 100 MHz
 
          @(posedge `UART_CLK);
          //Baud Rate MSB
