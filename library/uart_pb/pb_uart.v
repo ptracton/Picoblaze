@@ -72,33 +72,34 @@ module pb_uart (/*AUTOARG*/
                             .baud_rate(baud_rate),
                             // Inputs
                             .clk(clk), 
-                            .reset(reset), 
+                            .reset(reset),
+                            .enable(1'b1),
                             .clock_divide(uart_clock_divide)
                             ) ;
    
-   uart_regs regs(/*AUTOINST*/
-                  // Outputs
-                  .data_out             (data_out[7:0]),
-                  .interrupt            (interrupt),
-                  .buffer_write         (buffer_write),
-                  .uart_data_write      (uart_data_write[7:0]),
-                  .buffer_read          (buffer_read),
-                  .enable               (enable),
-                  .uart_clock_divide    (uart_clock_divide[15:0]),
-                  // Inputs
-                  .clk                  (clk),
-                  .reset                (reset),
-                  .port_id              (port_id[7:0]),
-                  .data_in              (data_in[7:0]),
-                  .read_strobe          (read_strobe),
-                  .write_strobe         (write_strobe),
-                  .uart_data_read       (uart_data_read[7:0]),
-                  .rx_data_present      (rx_data_present),
-                  .rx_half_full         (rx_half_full),
-                  .rx_full              (rx_full),
-                  .tx_data_present      (tx_data_present),
-                  .tx_half_full         (tx_half_full),
-                  .tx_full              (tx_full));
+   pb_uart_regs regs(/*AUTOINST*/
+                     // Outputs
+                     .data_out             (data_out[7:0]),
+                     .interrupt            (interrupt),
+                     .buffer_write         (buffer_write),
+                     .uart_data_write      (uart_data_write[7:0]),
+                     .buffer_read          (buffer_read),
+                     .enable               (),
+                     .uart_clock_divide    (uart_clock_divide[15:0]),
+                     // Inputs
+                     .clk                  (clk),
+                     .reset                (reset),
+                     .port_id              (port_id[7:0]),
+                     .data_in              (data_in[7:0]),
+                     .read_strobe          (read_strobe),
+                     .write_strobe         (write_strobe),
+                     .uart_data_read       (uart_data_read[7:0]),
+                     .rx_data_present      (rx_data_present),
+                     .rx_half_full         (rx_half_full),
+                     .rx_full              (rx_full),
+                     .tx_data_present      (tx_data_present),
+                     .tx_half_full         (tx_half_full),
+                     .tx_full              (tx_full));
    
    
    

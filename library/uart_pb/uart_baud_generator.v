@@ -12,7 +12,7 @@ module uart_baud_generator (/*AUTOARG*/
    // Outputs
    baud_rate,
    // Inputs
-   clk, reset, clock_divide
+   clk, reset, enable, clock_divide
    ) ;
    input clk;
    input reset;

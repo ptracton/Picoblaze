@@ -25,10 +25,13 @@ module uart_echo_pb (/*AUTOARG*/
    wire                 RESET_OUT;              // From syscon of system_controller.v
    // End of automatics
    /*AUTOREG*/
-   // Beginning of automatic regs (for this module's undeclared outputs)
-   reg                  TX;
-   // End of automatics
 
+   wire                 TX;
+   wire [7:0]           port_id;
+   wire [7:0]           out_port;
+   wire [7:0]           in_port;
+   wire [7:0]           uart_data_out;
+      
    //
    // System Controller
    //
@@ -62,5 +65,23 @@ module uart_echo_pb (/*AUTOARG*/
    assign interrupt = uart_irq;
    assign kcpsm6_sleep = 0;   
 
+   //
+   // UART
+   //
+   pb_uart uart(
+                // Outputs
+                .TX(TX), 
+                .data_out(uart_data_out), 
+                .interrupt(uart_irq),
+                // Inputs
+                .clk(CLK_OUT), 
+                .reset(RESET_OUT), 
+                .RX(RX), 
+                .port_id(port_id), 
+                .data_in(out_port), 
+                .read_strobe(read_strobe), 
+                .write_strobe(write_strobe)
+                ) ;
+   
    
 endmodule // uart_echo_pb

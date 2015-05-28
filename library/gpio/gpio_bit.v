@@ -32,21 +32,23 @@ module gpio_bit (/*AUTOARG*/
    // If gpio_oen (Output ENable) is high, drive the
    // GPIO pin with the data from the CPU
    //
-   //assign gpio = (gpio_oen) ? gpio_data_out : 1'bz;
+   assign gpio = (gpio_oen) ? gpio_data_out : 1'bz;
 
 
    //
    // If gpio_oen (Output ENable) is low, sample the input
    // from the GPIO on every clock edge and send back to CPU
    //
-   //assign gpio_data_in = (!gpio_oen) ? gpio : 1'bz;
+   assign gpio_data_in = (!gpio_oen) ? gpio : 1'bz;
    
 
+/* -----\/----- EXCLUDED -----\/-----
    IOBUF  IOBUF_inst (
                          .O(gpio_data_in), // Buffer output
                          .IO(gpio), // Buffer inout port (connect directly to top-level port)
                          .I(gpio_data_out), // Buffer input
                          .T(~gpio_oen) // 3-state enable input, high=input, low=output
                          );
+ -----/\----- EXCLUDED -----/\----- */
    
 endmodule // gpio_bit

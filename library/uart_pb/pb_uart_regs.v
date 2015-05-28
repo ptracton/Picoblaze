@@ -8,7 +8,7 @@
 // Update Count    : 0
 // Status          : Unknown, Use with caution!
 
-module uart_regs (/*AUTOARG*/
+module pb_uart_regs (/*AUTOARG*/
    // Outputs
    data_out, interrupt, buffer_write, uart_data_write, buffer_read,
    enable, uart_clock_divide,
@@ -72,7 +72,9 @@ module uart_regs (/*AUTOARG*/
    reg                    buffer_read          = 1'b0;
    reg                    buffer_write         = 1'b0;
    reg [7:0]              uart_data_write      = 8'h00;
-   reg [7:0]              uart_data_read       = 8'h00;
+   reg [7:0]              uart_data_read_reg   = 8'h00;
+   reg [7:0]              data_out             = 8'h00;
+   reg                    interrupt            = 1'b0;
    
    //
    // Register Writing
@@ -113,13 +115,13 @@ module uart_regs (/*AUTOARG*/
    always @(posedge clk) begin
 
       if (uart_data_out_enable) begin
-         data_out <= uart_data_out;         
+         data_out <= uart_data_read;         
          buffer_read <= 1'b1;           
       end else begin
          buffer_read <= 1'b0;           
       end
 
-      else if (uart_control_enable) begin
+      if (uart_control_enable) begin
          data_out <= uart_control;           
       end
 

@@ -85,8 +85,8 @@ module cpu (/*AUTOARG*/
    // used to 'OR' your signal with 'rdl' from the program memory.
    // 
    
-   basic_rom
-   program_rom (    		       	//Name to match your PSM file
+   uart_echo_pb_rom
+     program_rom (    		       	//Name to match your PSM file
 	                                .enable 		(bram_enable),
 	                                .address 		(address),
 	                                .instruction 	(instruction),
