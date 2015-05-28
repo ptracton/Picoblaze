@@ -91,10 +91,8 @@ module pb_uart_regs (/*AUTOARG*/
         if (uart_data_in_enable) begin
            uart_data_write <= data_in;           
            buffer_write <= 1'b1;           
-        end else begin
-           buffer_write <= 1'b0;           
         end
-
+        
         if (uart_control_enable) begin
            uart_control <= data_in;           
         end
@@ -112,7 +110,11 @@ module pb_uart_regs (/*AUTOARG*/
         end        
 
         
-     end
+     end else begin
+        buffer_write <= 1'b0;           
+     end // else: !if(write_strobe == 1'b1)
+   
+
 
 
    //
