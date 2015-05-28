@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject type="group" fp_name="group15">
+      <obj_property name="label">TESTBENCH</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/TX">
+         <obj_property name="ElementShortName">TX</obj_property>
+         <obj_property name="ObjectShortName">TX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/CLK_IN">
+         <obj_property name="ElementShortName">CLK_IN</obj_property>
+         <obj_property name="ObjectShortName">CLK_IN</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/RESET_IN">
+         <obj_property name="ElementShortName">RESET_IN</obj_property>
+         <obj_property name="ObjectShortName">RESET_IN</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/read_word">
+         <obj_property name="ElementShortName">read_word[31:0]</obj_property>
+         <obj_property name="ObjectShortName">read_word[31:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0_adr">
+         <obj_property name="ElementShortName">uart0_adr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">uart0_adr[31:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0_dat_o">
+         <obj_property name="ElementShortName">uart0_dat_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">uart0_dat_o[31:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0_dat_i">
+         <obj_property name="ElementShortName">uart0_dat_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">uart0_dat_i[31:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/uart0_sel">
+         <obj_property name="ElementShortName">uart0_sel[3:0]</obj_property>
+         <obj_property name="ObjectShortName">uart0_sel[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0_cyc">
+         <obj_property name="ElementShortName">uart0_cyc</obj_property>
+         <obj_property name="ObjectShortName">uart0_cyc</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0_stb">
+         <obj_property name="ElementShortName">uart0_stb</obj_property>
+         <obj_property name="ObjectShortName">uart0_stb</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0_we">
+         <obj_property name="ElementShortName">uart0_we</obj_property>
+         <obj_property name="ObjectShortName">uart0_we</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0_ack">
+         <obj_property name="ElementShortName">uart0_ack</obj_property>
+         <obj_property name="ObjectShortName">uart0_ack</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/uart0_int">
+         <obj_property name="ElementShortName">uart0_int</obj_property>
+         <obj_property name="ObjectShortName">uart0_int</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/RX">
+         <obj_property name="ElementShortName">RX</obj_property>
+         <obj_property name="ObjectShortName">RX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group32">
+      <obj_property name="label">DUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/CLK_IN">
+         <obj_property name="ElementShortName">CLK_IN</obj_property>
+         <obj_property name="ObjectShortName">CLK_IN</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/RESET_IN">
+         <obj_property name="ElementShortName">RESET_IN</obj_property>
+         <obj_property name="ObjectShortName">RESET_IN</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/RX">
+         <obj_property name="ElementShortName">RX</obj_property>
+         <obj_property name="ObjectShortName">RX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/CLK_OUT">
+         <obj_property name="ElementShortName">CLK_OUT</obj_property>
+         <obj_property name="ObjectShortName">CLK_OUT</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/RESET_OUT">
+         <obj_property name="ElementShortName">RESET_OUT</obj_property>
+         <obj_property name="ObjectShortName">RESET_OUT</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/TX">
+         <obj_property name="ElementShortName">TX</obj_property>
+         <obj_property name="ObjectShortName">TX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/port_id">
+         <obj_property name="ElementShortName">port_id[7:0]</obj_property>
+         <obj_property name="ObjectShortName">port_id[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/out_port">
+         <obj_property name="ElementShortName">out_port[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_port[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/in_port">
+         <obj_property name="ElementShortName">in_port[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_port[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart_data_out">
+         <obj_property name="ElementShortName">uart_data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_data_out[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/write_strobe">
+         <obj_property name="ElementShortName">write_strobe</obj_property>
+         <obj_property name="ObjectShortName">write_strobe</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/read_strobe">
+         <obj_property name="ElementShortName">read_strobe</obj_property>
+         <obj_property name="ObjectShortName">read_strobe</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/interrupt_ack">
+         <obj_property name="ElementShortName">interrupt_ack</obj_property>
+         <obj_property name="ObjectShortName">interrupt_ack</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/interrupt">
+         <obj_property name="ElementShortName">interrupt</obj_property>
+         <obj_property name="ObjectShortName">interrupt</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/kcpsm6_sleep">
+         <obj_property name="ElementShortName">kcpsm6_sleep</obj_property>
+         <obj_property name="ObjectShortName">kcpsm6_sleep</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart_irq">
+         <obj_property name="ElementShortName">uart_irq</obj_property>
+         <obj_property name="ObjectShortName">uart_irq</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group51">
+      <obj_property name="label">Picoblaze</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/address">
+         <obj_property name="ElementShortName">address[11:0]</obj_property>
+         <obj_property name="ObjectShortName">address[11:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/instruction">
+         <obj_property name="ElementShortName">instruction[17:0]</obj_property>
+         <obj_property name="ObjectShortName">instruction[17:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/bram_enable">
+         <obj_property name="ElementShortName">bram_enable</obj_property>
+         <obj_property name="ObjectShortName">bram_enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/in_port">
+         <obj_property name="ElementShortName">in_port[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_port[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/out_port">
+         <obj_property name="ElementShortName">out_port[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_port[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/port_id">
+         <obj_property name="ElementShortName">port_id[7:0]</obj_property>
+         <obj_property name="ObjectShortName">port_id[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/write_strobe">
+         <obj_property name="ElementShortName">write_strobe</obj_property>
+         <obj_property name="ObjectShortName">write_strobe</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/k_write_strobe">
+         <obj_property name="ElementShortName">k_write_strobe</obj_property>
+         <obj_property name="ObjectShortName">k_write_strobe</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/read_strobe">
+         <obj_property name="ElementShortName">read_strobe</obj_property>
+         <obj_property name="ObjectShortName">read_strobe</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/interrupt">
+         <obj_property name="ElementShortName">interrupt</obj_property>
+         <obj_property name="ObjectShortName">interrupt</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/interrupt_ack">
+         <obj_property name="ElementShortName">interrupt_ack</obj_property>
+         <obj_property name="ObjectShortName">interrupt_ack</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/sleep">
+         <obj_property name="ElementShortName">sleep</obj_property>
+         <obj_property name="ObjectShortName">sleep</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/Picoblaze/processor/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/kcpsm6_opcode">
+         <obj_property name="ElementShortName">kcpsm6_opcode[1:152]</obj_property>
+         <obj_property name="ObjectShortName">kcpsm6_opcode[1:152]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/kcpsm6_status">
+         <obj_property name="ElementShortName">kcpsm6_status[1:128]</obj_property>
+         <obj_property name="ObjectShortName">kcpsm6_status[1:128]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/sim_s0">
+         <obj_property name="ElementShortName">sim_s0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sim_s0[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/Picoblaze/processor/sim_s1">
+         <obj_property name="ElementShortName">sim_s1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sim_s1[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group99">
+      <obj_property name="label">DUT UART</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/RX">
+         <obj_property name="ElementShortName">RX</obj_property>
+         <obj_property name="ObjectShortName">RX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/TX">
+         <obj_property name="ElementShortName">TX</obj_property>
+         <obj_property name="ObjectShortName">TX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/baud_rate">
+         <obj_property name="ElementShortName">baud_rate</obj_property>
+         <obj_property name="ObjectShortName">baud_rate</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/buffer_read">
+         <obj_property name="ElementShortName">buffer_read</obj_property>
+         <obj_property name="ObjectShortName">buffer_read</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/buffer_write">
+         <obj_property name="ElementShortName">buffer_write</obj_property>
+         <obj_property name="ObjectShortName">buffer_write</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/data_out">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/enable">
+         <obj_property name="ElementShortName">enable</obj_property>
+         <obj_property name="ObjectShortName">enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/interrupt">
+         <obj_property name="ElementShortName">interrupt</obj_property>
+         <obj_property name="ObjectShortName">interrupt</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/port_id">
+         <obj_property name="ElementShortName">port_id[7:0]</obj_property>
+         <obj_property name="ObjectShortName">port_id[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/read_strobe">
+         <obj_property name="ElementShortName">read_strobe</obj_property>
+         <obj_property name="ObjectShortName">read_strobe</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/rx_data_present">
+         <obj_property name="ElementShortName">rx_data_present</obj_property>
+         <obj_property name="ObjectShortName">rx_data_present</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/rx_full">
+         <obj_property name="ElementShortName">rx_full</obj_property>
+         <obj_property name="ObjectShortName">rx_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/rx_half_full">
+         <obj_property name="ElementShortName">rx_half_full</obj_property>
+         <obj_property name="ObjectShortName">rx_half_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/tx_data_present">
+         <obj_property name="ElementShortName">tx_data_present</obj_property>
+         <obj_property name="ObjectShortName">tx_data_present</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/tx_full">
+         <obj_property name="ElementShortName">tx_full</obj_property>
+         <obj_property name="ObjectShortName">tx_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/tx_half_full">
+         <obj_property name="ElementShortName">tx_half_full</obj_property>
+         <obj_property name="ObjectShortName">tx_half_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/uart_clock_divide">
+         <obj_property name="ElementShortName">uart_clock_divide[15:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_clock_divide[15:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/uart_data_read">
+         <obj_property name="ElementShortName">uart_data_read[7:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_data_read[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/uart_data_write">
+         <obj_property name="ElementShortName">uart_data_write[7:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_data_write[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/write_strobe">
+         <obj_property name="ElementShortName">write_strobe</obj_property>
+         <obj_property name="ObjectShortName">write_strobe</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group106">
+      <obj_property name="label">BAUD GEN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/baud/baud_rate">
+         <obj_property name="ElementShortName">baud_rate</obj_property>
+         <obj_property name="ObjectShortName">baud_rate</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/baud/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/baud/clock_divide">
+         <obj_property name="ElementShortName">clock_divide[15:0]</obj_property>
+         <obj_property name="ObjectShortName">clock_divide[15:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/baud/count">
+         <obj_property name="ElementShortName">count[15:0]</obj_property>
+         <obj_property name="ObjectShortName">count[15:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/baud/enable">
+         <obj_property name="ElementShortName">enable</obj_property>
+         <obj_property name="ObjectShortName">enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/baud/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group139">
+      <obj_property name="label">DUT UART REGS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/buffer_read">
+         <obj_property name="ElementShortName">buffer_read</obj_property>
+         <obj_property name="ObjectShortName">buffer_read</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/buffer_write">
+         <obj_property name="ElementShortName">buffer_write</obj_property>
+         <obj_property name="ObjectShortName">buffer_write</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/data_out">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/enable">
+         <obj_property name="ElementShortName">enable</obj_property>
+         <obj_property name="ObjectShortName">enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/interrupt">
+         <obj_property name="ElementShortName">interrupt</obj_property>
+         <obj_property name="ObjectShortName">interrupt</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/port_id">
+         <obj_property name="ElementShortName">port_id[7:0]</obj_property>
+         <obj_property name="ObjectShortName">port_id[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/read_strobe">
+         <obj_property name="ElementShortName">read_strobe</obj_property>
+         <obj_property name="ObjectShortName">read_strobe</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/rx_data_present">
+         <obj_property name="ElementShortName">rx_data_present</obj_property>
+         <obj_property name="ObjectShortName">rx_data_present</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/rx_full">
+         <obj_property name="ElementShortName">rx_full</obj_property>
+         <obj_property name="ObjectShortName">rx_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/rx_half_full">
+         <obj_property name="ElementShortName">rx_half_full</obj_property>
+         <obj_property name="ObjectShortName">rx_half_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/tx_data_present">
+         <obj_property name="ElementShortName">tx_data_present</obj_property>
+         <obj_property name="ObjectShortName">tx_data_present</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/tx_full">
+         <obj_property name="ElementShortName">tx_full</obj_property>
+         <obj_property name="ObjectShortName">tx_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/tx_half_full">
+         <obj_property name="ElementShortName">tx_half_full</obj_property>
+         <obj_property name="ObjectShortName">tx_half_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_clock_divide">
+         <obj_property name="ElementShortName">uart_clock_divide[15:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_clock_divide[15:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_clock_divide_lower_enable">
+         <obj_property name="ElementShortName">uart_clock_divide_lower_enable</obj_property>
+         <obj_property name="ObjectShortName">uart_clock_divide_lower_enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_clock_divide_upper_enable">
+         <obj_property name="ElementShortName">uart_clock_divide_upper_enable</obj_property>
+         <obj_property name="ObjectShortName">uart_clock_divide_upper_enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_control">
+         <obj_property name="ElementShortName">uart_control[7:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_control[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_control_enable">
+         <obj_property name="ElementShortName">uart_control_enable</obj_property>
+         <obj_property name="ObjectShortName">uart_control_enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_data_in_enable">
+         <obj_property name="ElementShortName">uart_data_in_enable</obj_property>
+         <obj_property name="ObjectShortName">uart_data_in_enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_data_out_enable">
+         <obj_property name="ElementShortName">uart_data_out_enable</obj_property>
+         <obj_property name="ObjectShortName">uart_data_out_enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_data_read">
+         <obj_property name="ElementShortName">uart_data_read[7:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_data_read[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_data_read_reg">
+         <obj_property name="ElementShortName">uart_data_read_reg[7:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_data_read_reg[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_data_write">
+         <obj_property name="ElementShortName">uart_data_write[7:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_data_write[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_irq">
+         <obj_property name="ElementShortName">uart_irq[2:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_irq[2:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_irq_enable">
+         <obj_property name="ElementShortName">uart_irq_enable</obj_property>
+         <obj_property name="ObjectShortName">uart_irq_enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/regs/uart_irq_mask">
+         <obj_property name="ElementShortName">uart_irq_mask[2:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_irq_mask[2:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_irq_mask_enable">
+         <obj_property name="ElementShortName">uart_irq_mask_enable</obj_property>
+         <obj_property name="ObjectShortName">uart_irq_mask_enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/uart_status_enable">
+         <obj_property name="ElementShortName">uart_status_enable</obj_property>
+         <obj_property name="ObjectShortName">uart_status_enable</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/regs/write_strobe">
+         <obj_property name="ElementShortName">write_strobe</obj_property>
+         <obj_property name="ObjectShortName">write_strobe</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group175">
+      <obj_property name="label">DUT UART RECEIVER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/buffer_data_present">
+         <obj_property name="ElementShortName">buffer_data_present</obj_property>
+         <obj_property name="ObjectShortName">buffer_data_present</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/buffer_full">
+         <obj_property name="ElementShortName">buffer_full</obj_property>
+         <obj_property name="ObjectShortName">buffer_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/buffer_half_full">
+         <obj_property name="ElementShortName">buffer_half_full</obj_property>
+         <obj_property name="ObjectShortName">buffer_half_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/buffer_read">
+         <obj_property name="ElementShortName">buffer_read</obj_property>
+         <obj_property name="ObjectShortName">buffer_read</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/buffer_reset">
+         <obj_property name="ElementShortName">buffer_reset</obj_property>
+         <obj_property name="ObjectShortName">buffer_reset</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/buffer_write">
+         <obj_property name="ElementShortName">buffer_write</obj_property>
+         <obj_property name="ObjectShortName">buffer_write</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/buffer_write_value">
+         <obj_property name="ElementShortName">buffer_write_value</obj_property>
+         <obj_property name="ObjectShortName">buffer_write_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/data">
+         <obj_property name="ElementShortName">data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/data_out">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/data_present_int">
+         <obj_property name="ElementShortName">data_present_int</obj_property>
+         <obj_property name="ObjectShortName">data_present_int</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/data_present_value">
+         <obj_property name="ElementShortName">data_present_value</obj_property>
+         <obj_property name="ObjectShortName">data_present_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/data_value">
+         <obj_property name="ElementShortName">data_value[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_value[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/div">
+         <obj_property name="ElementShortName">div[3:0]</obj_property>
+         <obj_property name="ObjectShortName">div[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/div_carry">
+         <obj_property name="ElementShortName">div_carry</obj_property>
+         <obj_property name="ObjectShortName">div_carry</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/div_value">
+         <obj_property name="ElementShortName">div_value[3:0]</obj_property>
+         <obj_property name="ObjectShortName">div_value[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/en_16_x_baud">
+         <obj_property name="ElementShortName">en_16_x_baud</obj_property>
+         <obj_property name="ObjectShortName">en_16_x_baud</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/en_pointer">
+         <obj_property name="ElementShortName">en_pointer</obj_property>
+         <obj_property name="ObjectShortName">en_pointer</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/full_int">
+         <obj_property name="ElementShortName">full_int</obj_property>
+         <obj_property name="ObjectShortName">full_int</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/pointer">
+         <obj_property name="ElementShortName">pointer[3:0]</obj_property>
+         <obj_property name="ObjectShortName">pointer[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/receiver/pointer_value">
+         <obj_property name="ElementShortName">pointer_value[3:0]</obj_property>
+         <obj_property name="ObjectShortName">pointer_value[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/run">
+         <obj_property name="ElementShortName">run</obj_property>
+         <obj_property name="ObjectShortName">run</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/run_value">
+         <obj_property name="ElementShortName">run_value</obj_property>
+         <obj_property name="ObjectShortName">run_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/sample">
+         <obj_property name="ElementShortName">sample</obj_property>
+         <obj_property name="ObjectShortName">sample</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/sample_dly">
+         <obj_property name="ElementShortName">sample_dly</obj_property>
+         <obj_property name="ObjectShortName">sample_dly</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/sample_dly_value">
+         <obj_property name="ElementShortName">sample_dly_value</obj_property>
+         <obj_property name="ObjectShortName">sample_dly_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/sample_input">
+         <obj_property name="ElementShortName">sample_input</obj_property>
+         <obj_property name="ObjectShortName">sample_input</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/sample_input_value">
+         <obj_property name="ElementShortName">sample_input_value</obj_property>
+         <obj_property name="ObjectShortName">sample_input_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/sample_value">
+         <obj_property name="ElementShortName">sample_value</obj_property>
+         <obj_property name="ObjectShortName">sample_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/serial_in">
+         <obj_property name="ElementShortName">serial_in</obj_property>
+         <obj_property name="ObjectShortName">serial_in</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/start_bit">
+         <obj_property name="ElementShortName">start_bit</obj_property>
+         <obj_property name="ObjectShortName">start_bit</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/start_bit_value">
+         <obj_property name="ElementShortName">start_bit_value</obj_property>
+         <obj_property name="ObjectShortName">start_bit_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/stop_bit">
+         <obj_property name="ElementShortName">stop_bit</obj_property>
+         <obj_property name="ObjectShortName">stop_bit</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/stop_bit_value">
+         <obj_property name="ElementShortName">stop_bit_value</obj_property>
+         <obj_property name="ObjectShortName">stop_bit_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/receiver/zero">
+         <obj_property name="ElementShortName">zero</obj_property>
+         <obj_property name="ObjectShortName">zero</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group206">
+      <obj_property name="label">DUT UART TRANSMITTER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/buffer_data_present">
+         <obj_property name="ElementShortName">buffer_data_present</obj_property>
+         <obj_property name="ObjectShortName">buffer_data_present</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/buffer_full">
+         <obj_property name="ElementShortName">buffer_full</obj_property>
+         <obj_property name="ObjectShortName">buffer_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/buffer_half_full">
+         <obj_property name="ElementShortName">buffer_half_full</obj_property>
+         <obj_property name="ObjectShortName">buffer_half_full</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/buffer_read">
+         <obj_property name="ElementShortName">buffer_read</obj_property>
+         <obj_property name="ObjectShortName">buffer_read</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/buffer_read_value">
+         <obj_property name="ElementShortName">buffer_read_value</obj_property>
+         <obj_property name="ObjectShortName">buffer_read_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/buffer_reset">
+         <obj_property name="ElementShortName">buffer_reset</obj_property>
+         <obj_property name="ObjectShortName">buffer_reset</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/buffer_write">
+         <obj_property name="ElementShortName">buffer_write</obj_property>
+         <obj_property name="ObjectShortName">buffer_write</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/data">
+         <obj_property name="ElementShortName">data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/data_present_int">
+         <obj_property name="ElementShortName">data_present_int</obj_property>
+         <obj_property name="ObjectShortName">data_present_int</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/data_present_value">
+         <obj_property name="ElementShortName">data_present_value</obj_property>
+         <obj_property name="ObjectShortName">data_present_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/div">
+         <obj_property name="ElementShortName">div[3:0]</obj_property>
+         <obj_property name="ObjectShortName">div[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/div_value">
+         <obj_property name="ElementShortName">div_value[3:0]</obj_property>
+         <obj_property name="ObjectShortName">div_value[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/en_16_x_baud">
+         <obj_property name="ElementShortName">en_16_x_baud</obj_property>
+         <obj_property name="ObjectShortName">en_16_x_baud</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/en_pointer">
+         <obj_property name="ElementShortName">en_pointer</obj_property>
+         <obj_property name="ObjectShortName">en_pointer</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/full_int">
+         <obj_property name="ElementShortName">full_int</obj_property>
+         <obj_property name="ObjectShortName">full_int</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/last_bit">
+         <obj_property name="ElementShortName">last_bit</obj_property>
+         <obj_property name="ObjectShortName">last_bit</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/lsb_data">
+         <obj_property name="ElementShortName">lsb_data</obj_property>
+         <obj_property name="ObjectShortName">lsb_data</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/msb_data">
+         <obj_property name="ElementShortName">msb_data</obj_property>
+         <obj_property name="ObjectShortName">msb_data</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/next_bit">
+         <obj_property name="ElementShortName">next_bit</obj_property>
+         <obj_property name="ObjectShortName">next_bit</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/next_value">
+         <obj_property name="ElementShortName">next_value</obj_property>
+         <obj_property name="ObjectShortName">next_value</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/pointer">
+         <obj_property name="ElementShortName">pointer[3:0]</obj_property>
+         <obj_property name="ObjectShortName">pointer[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/pointer_value">
+         <obj_property name="ElementShortName">pointer_value[3:0]</obj_property>
+         <obj_property name="ObjectShortName">pointer_value[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/serial_data">
+         <obj_property name="ElementShortName">serial_data</obj_property>
+         <obj_property name="ObjectShortName">serial_data</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/serial_out">
+         <obj_property name="ElementShortName">serial_out</obj_property>
+         <obj_property name="ObjectShortName">serial_out</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/sm">
+         <obj_property name="ElementShortName">sm[3:0]</obj_property>
+         <obj_property name="ObjectShortName">sm[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/sm_value">
+         <obj_property name="ElementShortName">sm_value[3:0]</obj_property>
+         <obj_property name="ObjectShortName">sm_value[3:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/testbench/dut/uart/transmit/store_data">
+         <obj_property name="ElementShortName">store_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">store_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/testbench/dut/uart/transmit/zero">
+         <obj_property name="ElementShortName">zero</obj_property>
+         <obj_property name="ObjectShortName">zero</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
