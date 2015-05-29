@@ -18,6 +18,9 @@ start:
         ENABLE INTERRUPT
         
  loop:
+        ;; 
+        ;;         load s0, 41
+        ;;         output s0, UART_DATA_OUT
       
          JUMP loop
 

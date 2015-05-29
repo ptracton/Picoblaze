@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="2" Path="/data/pace/hpc_scratch/vol1/tractp1/hardware/Picoblaze/projects/uart_echo_pb/fpga/project_1.xpr">
+<Project Version="7" Minor="2" Path="/home/ptracton/src/hardware/Picoblaze/projects/uart_echo_pb/fpga/project_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7b6ac960524147ecbbebc044cf6f9be4"/>
@@ -239,7 +239,6 @@
         <Option Name="TopModule" Val="testbench"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
-        <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/testbench_behav.wcfg"/>
         <Option Name="xsim.elaborate.debug_level" Val="all"/>
@@ -287,4 +286,5 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
   </Runs>
+  <HWSession Dir="hw_1" File="hw.xml"/>
 </Project>

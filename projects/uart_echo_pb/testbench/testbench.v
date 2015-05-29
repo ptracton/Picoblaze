@@ -164,6 +164,7 @@ module testbench (/*AUTOARG*/) ;
 
       repeat(100)@(posedge clk_tb);
 
+
       `UART_READ_CHAR("A");
       `UART_READ_CHAR("B");
       `UART_READ_CHAR("C");
