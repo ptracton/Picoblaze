@@ -8,7 +8,7 @@
 // Update Count    : 0
 // Status          : Unknown, Use with caution!
 
-module uart_echo_pb (/*AUTOARG*/
+module display_top (/*AUTOARG*/
    // Outputs
    TX, ANODE, CATHODE,
    // Inputs

@@ -20,7 +20,7 @@
 start:
         load S0, 35
         output S0, UART_CLOCK_DIVIDE_LOWER
-        load s0, 0
+        load s0, 4
         output S0, DISPLAY_SEGMENT0
         output S0, DISPLAY_SEGMENT1
         output S0, DISPLAY_SEGMENT2
@@ -35,8 +35,36 @@ start:
          JUMP loop
 
 IRQ_HANDLER:
+        ;;  Echo the character back to terminal
         input S1, UART_DATA_IN
         output S1, UART_DATA_OUT
+
+        ;; if less than 0x30 (ascii '0') don't update
+        ;; the 7 segment displays
+        compare s1, 30
+        jump C, IRQ_HANDLER_RETURN
+
+        ;; if greater than 0x39 (ascii '9') don't update
+        ;; the 7 segment display
+        compare s1, 39
+        jump Z, UPDATE_DISPLAY
+        jump C, UPDATE_DISPLAY
+        jump IRQ_HANDLER_RETURN
+
+UPDATE_DISPLAY: 
+        ;; Shift 7 ssegment display over
+        input s2,  DISPLAY_SEGMENT2
+        output s2,  DISPLAY_SEGMENT3
+
+        input s2,  DISPLAY_SEGMENT1
+        output s2,  DISPLAY_SEGMENT2
+
+        input s2,  DISPLAY_SEGMENT0
+        output s2,  DISPLAY_SEGMENT1
+
+        output s1, DISPLAY_SEGMENT0
+
+IRQ_HANDLER_RETURN:     
         RETURNI ENABLE
         
         address 3FF

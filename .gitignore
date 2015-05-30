@@ -30,3 +30,15 @@
 
 # Debug files
 *.dSYM/
+
+# Emacs save files
+*~
+
+# Other stuff
+*.log
+*.jou
+*.pb
+*.mem
+*.hex
+*.wdb
+*.fmt 

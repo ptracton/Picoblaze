@@ -41,7 +41,8 @@ module pb_display (/*AUTOARG*/
    //
    // Registers
    //
-   display_regs regs (/*AUTOINST*/
+   display_regs #(.BASE_ADDRESS(BASE_ADDRESS))
+     regs (/*AUTOINST*/
                       // Outputs
                       .data_out         (data_out[7:0]),
                       .segment0         (segment0[7:0]),

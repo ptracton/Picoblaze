@@ -15,7 +15,9 @@ module testbench (/*AUTOARG*/) ;
 
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
-   wire                 TX;                     // From dut of uart_echo_pb.v
+   wire [3:0]           ANODE;                  // From dut of display_top.v
+   wire [7:0]           CATHODE;                // From dut of display_top.v
+   wire                 TX;                     // From dut of display_top.v
    // End of automatics
    /*AUTOREG*/
    
@@ -71,13 +73,15 @@ module testbench (/*AUTOARG*/) ;
    
    reg [31:0]           read_word;
    
-   uart_echo_pb dut(/*AUTOINST*/
-                    // Outputs
-                    .TX                 (TX),
-                    // Inputs
-                    .CLK_IN             (CLK_IN),
-                    .RESET_IN           (RESET_IN),
-                    .RX                 (RX));
+   display_top dut(/*AUTOINST*/
+                   // Outputs
+                   .TX                  (TX),
+                   .ANODE               (ANODE[3:0]),
+                   .CATHODE             (CATHODE[7:0]),
+                   // Inputs
+                   .CLK_IN              (CLK_IN),
+                   .RESET_IN            (RESET_IN),
+                   .RX                  (RX));
    
    /****************************************************************************
     UART 0 
@@ -156,20 +160,20 @@ module testbench (/*AUTOARG*/) ;
       repeat(100) @(posedge CLK_IN);
       `UART_CONFIG;
 
-      `UART_WRITE_CHAR("A");
-      `UART_WRITE_CHAR("B");
-      `UART_WRITE_CHAR("C");
-      `UART_WRITE_CHAR("D");
-      `UART_WRITE_CHAR("E");
+      `UART_WRITE_CHAR("3");
+      `UART_WRITE_CHAR("4");
+      `UART_WRITE_CHAR("5");
+      `UART_WRITE_CHAR("6");
+      `UART_WRITE_CHAR("7");
 
       repeat(100)@(posedge clk_tb);
 
 
-      `UART_READ_CHAR("A");
-      `UART_READ_CHAR("B");
-      `UART_READ_CHAR("C");
-      `UART_READ_CHAR("D");
-      `UART_READ_CHAR("E");
+      `UART_READ_CHAR("3");
+      `UART_READ_CHAR("4");
+      `UART_READ_CHAR("5");
+      `UART_READ_CHAR("6");
+      `UART_READ_CHAR("7");
       
       
       
