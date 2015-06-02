@@ -1,0 +1,37 @@
+{
+    "project":"Basic Picoblaze Project",
+    "flow_steps": {
+	"1" : "clean",
+    "2" : "compile",
+	"3" : "xvlog",
+    "4" : "xelab",
+    "5" : "xsim"
+    },
+    "flow" : {
+	"clean" :{
+	    "executable" : "rm",
+	    "arguments" : "-rf *.log *.pb *~ webtalk* xsim* *.fmt *.mem *.wdb ../firmware/*.fmt ../firmware/uart_echo_pb.v ../firmware/*.log ../firmware/*.mem ../firmware/*.fmt"
+	},
+    "compile":{
+        "executable": "opbasm",
+        "arguments": "--input=../firmware/timers.psm --template=../firmware/ROM_form.v --pb6 --color-log --outdir=. --name=timers_rom "
+    },
+	"xvlog" :{
+	    "executable" : "xvlog",
+        "arguments" : " -prj sim.f  --include ../tasks/"
+	},
+    "xelab" :{
+        "executable":"xelab",
+        "arguments" : " work.glbl work.testbench -L unisims_ver -L unimacro_ver -L xilinxcorelib_ver -prj sim.f -log elaborate.log -debug all --timescale 1ns/1ns --include ../tasks/ --include  ../../../library/wb_uart/ --include ../../../library/wb_master/"
+    },
+	"xsim" : {
+	    "executable": "xsim",
+	    "arguments" : " -tclbatch testbench.tcl work.glbl#work.testbench -log simulate.log",
+        "gui" : " -g --view work.glbl#work.testbench.wcfg"
+	},
+	"run" : {
+	    "executable" : "./a.out",
+	    "arguments"  : " "
+	}
+    }
+}

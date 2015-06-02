@@ -12,12 +12,11 @@ module timer (/*AUTOARG*/
    // Outputs
    timer_interrupt,
    // Inputs
-   clk, timer_count, timer_enable, timer_one_shot
+   clk, timer_count, timer_enable, timer_interrupt_clear
    ) ;
    input clk;
    input [31:0] timer_count;
    input        timer_enable;
-   input        timer_one_shot; 
    input        timer_interrupt_clear;   
    output       timer_interrupt;
 
@@ -26,9 +25,14 @@ module timer (/*AUTOARG*/
    //
    reg [31:0]   count = 32'h0000_0000;
    reg          timer_interrupt = 1'b0;
+
+   //
+   // Wires
+   //
+   assign timer_expired = (count >= timer_count));
    
    always @(posedge clk)
-     if (timer_enable  && !(count >= timer_count)) begin
+     if (timer_enable  && !timer_expired) begin
         count <= count + 1;        
      end else begin
         count <= 32'h0000_0000;        
@@ -39,7 +43,7 @@ module timer (/*AUTOARG*/
    //
    always @(posedge clk)
      if (timer_enable  & !timer_interrupt_clear) begin
-        interrupt <= (count >= timer_count);        
+        interrupt <= timer_expired;        
      end else begin
         interrupt <= 1'b0;        
      end

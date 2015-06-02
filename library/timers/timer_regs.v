@@ -10,9 +10,11 @@
 
 module timer_regs (/*AUTOARG*/
    // Outputs
-   data_out, interrupt,
+   data_out, interrupt, timer_enable, timer_count,
+   timer_interrupt_clear,
    // Inputs
-   clk, reset, port_id, data_in, read_strobe, write_strobe
+   clk, reset, port_id, data_in, read_strobe, write_strobe,
+   timer_interrupt
    ) ;
    parameter BASE_ADDRESS = 8'h00;   
    
@@ -27,7 +29,6 @@ module timer_regs (/*AUTOARG*/
    
    output       interrupt;
    output       timer_enable;
-   output       timer_one_shot;
    output [31:0] timer_count;
    output        timer_interrupt_clear;   
    input         timer_interrupt;
@@ -46,10 +47,9 @@ module timer_regs (/*AUTOARG*/
    //
    // Wires
    //
-   wire          timer_enable    = timer_control[0];
-   wire          timer_one_shot  = timer_control[1];
-   wire          timer_interrupt_enable = timer_control[2];
-   wire          timer_interrupt_clear = timer_control[3];
+   wire          timer_enable           = timer_control[0];
+   wire          timer_interrupt_enable = timer_control[1];
+   wire          timer_interrupt_clear  = timer_control[2];
    
    //
    // Interrupt Logic

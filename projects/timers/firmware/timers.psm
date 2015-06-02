@@ -1,0 +1,68 @@
+        ;; Picoblaze UART Echo Program
+        ;;
+        ;; Look at https://code.google.com/p/opbasm/
+        ;; 
+        
+        CONSTANT TIMER_CONTROL,   00
+        CONSTANT TIMER_STATUS,    01
+        CONSTANT TIMER_IRQ_MASK,  02
+        CONSTANT TIMER_COUNT0,    03
+        CONSTANT TIMER_COUNT1,    04
+        CONSTANT TIMER_COUNT2,    05
+        CONSTANT TIMER_COUNT3,    06
+
+
+        CONSTANT DISPLAY_SEGMENT0, 10
+        CONSTANT DISPLAY_SEGMENT1, 11   
+        CONSTANT DISPLAY_SEGMENT2, 12   
+        CONSTANT DISPLAY_SEGMENT3, 13   
+        
+start:
+        load s0, A0
+        output S0, TIMER_COUNT0
+        load s0, 86
+        output S0, TIMER_COUNT1
+        load s0, 01 
+        output S0, TIMER_COUNT2
+
+        load S0, 0
+        output S0, TIMER_IRQ_MASK
+
+        load S0, 1
+        output S0, TIMER_CONTROL
+        
+        load s0, 1
+        output S0, DISPLAY_SEGMENT0
+        load s0, 2
+        output S0, DISPLAY_SEGMENT1
+        load s0, 3
+        output S0, DISPLAY_SEGMENT2
+        load s0, 4
+        output S0, DISPLAY_SEGMENT3
+        ENABLE INTERRUPT
+        
+ loop:
+            
+         JUMP loop
+
+IRQ_HANDLER:
+
+
+UPDATE_DISPLAY: 
+        ;; Shift 7 ssegment display over
+        input s2,  DISPLAY_SEGMENT2
+        output s2,  DISPLAY_SEGMENT3
+
+        input s2,  DISPLAY_SEGMENT1
+        output s2,  DISPLAY_SEGMENT2
+
+        input s2,  DISPLAY_SEGMENT0
+        output s2,  DISPLAY_SEGMENT1
+
+        output s1, DISPLAY_SEGMENT0
+
+IRQ_HANDLER_RETURN:     
+        RETURNI ENABLE
+        
+        address 3FF
+        jump IRQ_HANDLER
