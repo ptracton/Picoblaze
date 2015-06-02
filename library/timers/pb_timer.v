@@ -34,7 +34,6 @@ module pb_timer (/*AUTOARG*/
    wire                 timer_enable;           // From regs of timer_regs.v
    wire                 timer_interrupt;        // From timer0 of timer.v
    wire                 timer_interrupt_clear;  // From regs of timer_regs.v
-   wire                 timer_one_shot;         // From regs of timer_regs.v
    // End of automatics
    
    //
@@ -45,7 +44,6 @@ module pb_timer (/*AUTOARG*/
                     .data_out           (data_out[7:0]),
                     .interrupt          (interrupt),
                     .timer_enable       (timer_enable),
-                    .timer_one_shot     (timer_one_shot),
                     .timer_count        (timer_count[31:0]),
                     .timer_interrupt_clear(timer_interrupt_clear),
                     // Inputs
@@ -67,7 +65,6 @@ module pb_timer (/*AUTOARG*/
                 .clk                    (clk),
                 .timer_count            (timer_count[31:0]),
                 .timer_enable           (timer_enable),
-                .timer_one_shot         (timer_one_shot),
                 .timer_interrupt_clear  (timer_interrupt_clear));
    
 endmodule // pb_timer

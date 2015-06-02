@@ -10,9 +10,9 @@
 
 module timers_top (/*AUTOARG*/
    // Outputs
-   TX, ANODE, CATHODE,
+   ANODE, CATHODE,
    // Inputs
-   CLK_IN, RESET_IN, RX
+   CLK_IN, RESET_IN
    ) ;
    input CLK_IN;
    input RESET_IN;
@@ -27,7 +27,6 @@ module timers_top (/*AUTOARG*/
    // End of automatics
    /*AUTOREG*/
 
-   wire                 TX;
    wire [7:0]           port_id;
    wire [7:0]           out_port;
    wire [7:0]           in_port;

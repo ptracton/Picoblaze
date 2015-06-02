@@ -25,11 +25,12 @@ module timer (/*AUTOARG*/
    //
    reg [31:0]   count = 32'h0000_0000;
    reg          timer_interrupt = 1'b0;
-
+   reg          interrupt = 1'b0;
+   
    //
    // Wires
    //
-   assign timer_expired = (count >= timer_count));
+   assign timer_expired = (count >= timer_count);
    
    always @(posedge clk)
      if (timer_enable  && !timer_expired) begin

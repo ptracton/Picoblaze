@@ -3,7 +3,7 @@ verilog work ../rtl/glbl.v
 verilog work ../rtl/system_controller.v
 verilog work ../rtl/kcpsm6.v
 verilog work ../rtl/cpu.v
-verilog work ../simulation/display_rom.v
+verilog work ../simulation/timers_rom.v
 
 
 verilog work ../../../library/display/display_regs.v
