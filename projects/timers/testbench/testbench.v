@@ -31,25 +31,6 @@ module testbench (/*AUTOARG*/) ;
       end
    end
 
-   //
-   // Free Running 50 MHz Clock
-   //
-   reg clk_tb;
-
-   parameter   _clk_50mhz_high = 10,
-     _clk_50mhz_low  = 10,
-     _clk_50mhz_period = _clk_50mhz_high + _clk_50mhz_low;
-
-   initial
-     begin
-        clk_tb <= 'b0;
-        forever
-          begin
-             #(_clk_50mhz_low)  clk_tb = 1;
-             #(_clk_50mhz_high) clk_tb = 0;
-          end
-     end
-
    
    //
    // Reset
@@ -60,19 +41,6 @@ module testbench (/*AUTOARG*/) ;
       #1000 RESET_IN <= 0;      
    end
 
-   //
-   // Asynch. Reset to device
-   //
-   reg reset_tb;
-   initial
-     begin
-        reset_tb = 0;
-        #1    reset_tb = 1;
-        #200  reset_tb = 0;
-     end
-   
-   reg [31:0]           read_word;
-   
    timers_top dut(/*AUTOINST*/
                    // Outputs
                    .ANODE               (ANODE[3:0]),

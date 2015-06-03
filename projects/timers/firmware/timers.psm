@@ -31,13 +31,13 @@ start:
         load S0, 1
         output S0, TIMER_CONTROL
         
-        load s0, 1
+        load s0, 0
         output S0, DISPLAY_SEGMENT0
-        load s0, 2
+        load s0, 0
         output S0, DISPLAY_SEGMENT1
-        load s0, 3
+        load s0, 0
         output S0, DISPLAY_SEGMENT2
-        load s0, 4
+        load s0, 0
         output S0, DISPLAY_SEGMENT3
         ENABLE INTERRUPT
         
@@ -48,7 +48,41 @@ start:
 IRQ_HANDLER:
 
 
-UPDATE_DISPLAY: 
+UPDATE_DISPLAY:
+
+        ;; if seconds < 10
+        ;;    seconds ++
+        ;;    return
+        ;; else
+        ;;  seconds = 0
+        ;;  check_10_seconds
+        ;;
+        ;;check_10_seconds:
+        ;;if 10_seconds < 6
+        ;;   10_seconds ++
+        ;;   return
+        ;;else
+        ;;    10_seconds = 0
+        ;;    check_Mmnute
+        ;; 
+        ;;check_minute:
+        ;;if (minute <10)
+        ;;   minute ++
+        ;;   return
+        ;;else
+        ;;   minute = 0
+        ;;   check_10_min
+        ;; 
+        ;;check_10_min
+        ;;if 10_min < 6
+        ;;   10_min ++
+        ;;   return
+        ;; else
+        ;;    10_min = 0
+        ;;
+        ;; returnI
+        ;; 
+        
         ;; Shift 7 ssegment display over
         input s2,  DISPLAY_SEGMENT2
         output s2,  DISPLAY_SEGMENT3

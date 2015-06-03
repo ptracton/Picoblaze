@@ -14,11 +14,11 @@ set_property IOSTANDARD LVCMOS33 [get_ports RESET_IN]
 
  
 ##USB-RS232 Interface
-set_property PACKAGE_PIN B18 [get_ports RX]						
-set_property IOSTANDARD LVCMOS33 [get_ports RX]
+#set_property PACKAGE_PIN B18 [get_ports RX]						
+#set_property IOSTANDARD LVCMOS33 [get_ports RX]
 
-set_property PACKAGE_PIN A18 [get_ports TX]						
-set_property IOSTANDARD LVCMOS33 [get_ports TX]
+#set_property PACKAGE_PIN A18 [get_ports TX]						
+#set_property IOSTANDARD LVCMOS33 [get_ports TX]
 
 
 ##7 segment display
