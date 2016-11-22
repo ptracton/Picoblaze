@@ -30,6 +30,7 @@
 
 # Debug files
 *.dSYM/
+xsim.dir/
 
 # Emacs save files
 *~
