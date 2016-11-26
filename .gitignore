@@ -43,3 +43,4 @@ xsim.dir/
 *.hex
 *.wdb
 *.fmt 
+*.wdf
