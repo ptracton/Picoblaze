@@ -14,7 +14,7 @@
 	},
     "compile":{
         "executable": "opbasm",
-        "arguments": "--input=../firmware/uart_echo_pb.psm --template=../firmware/ROM_form.v --pb6 --color-log --outdir=. --name=uart_echo_pb_rom "
+        "arguments": "--input=../firmware/uart_echo_pb_rom.psm --template=../firmware/ROM_form.v --pb6 --color-log --outdir=. --name=uart_echo_pb_rom "
     },
 	"xvlog" :{
 	    "executable" : "xvlog",
